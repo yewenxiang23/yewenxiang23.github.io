@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/09/13/new-post/</loc>
+    <loc>http://www.ywx.store/2018/09/12/hello-world/</loc>
     
-    <lastmod>2018-09-13T07:20:38.152Z</lastmod>
+    <lastmod>2018-09-19T01:37:09.271Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/09/12/hello-world/</loc>
+    <loc>http://www.ywx.store/categories/index.html</loc>
     
-    <lastmod>2018-09-12T09:18:34.265Z</lastmod>
+    <lastmod>2018-09-14T01:38:44.011Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ywx.store/tags/index.html</loc>
+    
+    <lastmod>2018-09-14T01:36:33.075Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ywx.store/2018/09/13/new-post/</loc>
+    
+    <lastmod>2018-09-13T07:20:38.152Z</lastmod>
     
   </url>
   
