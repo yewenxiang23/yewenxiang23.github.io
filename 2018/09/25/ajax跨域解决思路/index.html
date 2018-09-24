@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="ajax,跨域," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="为什么会发生AJAX跨域？1.浏览器限制当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。 2.跨域发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。 3.发送的是 XHR(XMLHttpRequest) 请求如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。 解决问题的思路1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动ch">
+<meta name="keywords" content="ajax,跨域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax跨域解决思路">
+<meta property="og:url" content="http://www.ywx.store/2018/09/25/ajax跨域解决思路/index.html">
+<meta property="og:site_name" content="博客">
+<meta property="og:description" content="为什么会发生AJAX跨域？1.浏览器限制当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。 2.跨域发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。 3.发送的是 XHR(XMLHttpRequest) 请求如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。 解决问题的思路1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动ch">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/d6ab59d1f5d88bb1f8d72cba6adff180.jpg">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/84cab8c7a9d4a6ddf11d91651dc8531f.jpg">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/110b9eb47d145042bd41fe9cd5c0461c.jpg">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/c5ff5786443e2cc9f4a032414eda975f.jpg">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/1839df8c3a07b8c2dbae88d03e65484f.jpg">
+<meta property="og:updated_time" content="2018-09-24T16:01:47.648Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ajax跨域解决思路">
+<meta name="twitter:description" content="为什么会发生AJAX跨域？1.浏览器限制当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。 2.跨域发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。 3.发送的是 XHR(XMLHttpRequest) 请求如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。 解决问题的思路1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动ch">
+<meta name="twitter:image" content="http://ozrm3516s.bkt.clouddn.com/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.ywx.store/2018/09/25/ajax跨域解决思路/"/>
+
+
+
+
+
+  <title>ajax跨域解决思路 | 博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/25/ajax跨域解决思路/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yewenxiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/img.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ajax跨域解决思路</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-25T00:01:29+08:00">
+                2018-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/25/ajax跨域解决思路/" class="leancloud_visitors" data-flag-title="ajax跨域解决思路">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="为什么会发生AJAX跨域？"><a href="#为什么会发生AJAX跨域？" class="headerlink" title="为什么会发生AJAX跨域？"></a>为什么会发生AJAX跨域？</h3><h5 id="1-浏览器限制"><a href="#1-浏览器限制" class="headerlink" title="1.浏览器限制"></a>1.浏览器限制</h5><p>当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。</p>
+<h5 id="2-跨域"><a href="#2-跨域" class="headerlink" title="2.跨域"></a>2.跨域</h5><p>发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。</p>
+<h5 id="3-发送的是-XHR-XMLHttpRequest-请求"><a href="#3-发送的是-XHR-XMLHttpRequest-请求" class="headerlink" title="3.发送的是 XHR(XMLHttpRequest) 请求"></a>3.发送的是 XHR(XMLHttpRequest) 请求</h5><p>如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。<br><img src="http://ozrm3516s.bkt.clouddn.com/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg" alt=""></p>
+<h3 id="解决问题的思路"><a href="#解决问题的思路" class="headerlink" title="解决问题的思路"></a>解决问题的思路</h3><p>1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动chrome。</p>
+<p><code>open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/wenxiangye/MyChromeDevUserData/</code></p>
+<p>2.JSONP如何解决跨域问题？<br>利用JQ实现JSONP请求<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	url: base+<span class="string">"/get1"</span>,</span><br><span class="line">	dataType: <span class="string">"jsonp"</span>,</span><br><span class="line">	jsonp: <span class="string">"callback2"</span>,   <span class="comment">//默认不写前后端约定的名称是 callback</span></span><br><span class="line">	cache: <span class="literal">true</span>,  <span class="comment">//表示结果可以被缓存，jsonp请求url中不会带 `_`字段</span></span><br><span class="line">	success: <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">		result = json;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ozrm3516s.bkt.clouddn.com/d6ab59d1f5d88bb1f8d72cba6adff180.jpg" alt=""></p>
+<blockquote>
+<p>有三个不同点:</p>
+<ol>
+<li>请求的Type不同</li>
+<li>请求返回的 Content-Type 不同</li>
+<li>JSON请求的URL后面自动加了callback  </li>
+</ol>
+</blockquote>
+<p>动态创建<code>&lt;script&gt;</code>标签，请求的资源可以跨域，来解决跨域问题的（eg：<code>&lt;img&gt;</code>标签中请求图片的地址可以跨域）<br>后台代码也需要做处理，因为后台代码返回的是JSON，而通过JSONP请求的是JS文件，浏览器会把后台返回的JSON字符串当成是JS来解析，所以报错了。<br>后台代码需要做的调整就是：请求参数中发现callback 这个字段，需要返回JS代码，callback 后面的值作为函数名，而请求需要返回的参数，作为函数的参数。</p>
+<p>动态创建的script请求完毕后会被销毁，所以dom结构中无法查看，需要再JQ源码中9816行出打断点查看。<br><img src="http://ozrm3516s.bkt.clouddn.com/84cab8c7a9d4a6ddf11d91651dc8531f.jpg" alt=""></p>
+<blockquote>
+<p>jsonp请求里面除了callback参数之外还多了一个<code>_</code>参数，参数值是一个随机的数字，防止请求被缓存。</p>
+</blockquote>
+<p>JSON弊端：</p>
+<ul>
+<li>服务器需要做一些改动。</li>
+<li>只支持GET</li>
+<li>发送的不是XHR请求，（XHR有很多新的特性，比如异步。）</li>
+</ul>
+<p>3.被调用方解决跨域问题<br>响应头增加字段，告诉浏览器允许跨域。<br>浏览器发现请求是跨域的时候，他会在请求头增加当前域的字段<code>Origin: http://localhost:8081</code> 等请求返回来，他会检查响应头里面的字段信息，是否允许跨域。<br>后端需要在响应头增加 ：<br><code>Access-Control-Allow-Origin:http://localhost:8081</code><br><code>Access-Control-Allow-Methods:GET</code><br>两个字段都可以填写<code>*</code>表示所有域名和请求都可以跨域</p>
+<h5 id="简单请求和非简单请求"><a href="#简单请求和非简单请求" class="headerlink" title="简单请求和非简单请求"></a>简单请求和非简单请求</h5><p>浏览器在发送跨域请求的时候，会先判断跨域是简单请求还是非简单请求，如果是简单请求它会先执行，后判断。如果是非简单请求，会发一个OPTIONS的预检命令，检查通过后，他会把真正的请求发送过去。</p>
+<ul>
+<li>简单请求的定义：方法为<code>GET</code> <code>POST</code> <code>HEAD</code> 、无自定义头部、<code>Content-Type</code>为：<code>text/plain</code>、<code>multipart/form-data</code>、<code>application/x-www-form-urlencoded</code> 三种。</li>
+<li>非简单请求：方法为 <code>PUT</code>, <code>DELETE</code> 方法的ajax请求、发送json格式的ajax请求、带自定义头的请求</li>
+</ul>
+<p>非简单请求时，如果跨域了，浏览器首先发送一个OPTIONS预检请求，在预检请求中会有一个字段  <code>Access-Control-Request-Method: content-type</code> ，询问后台服务器是否允许 <code>content-type</code> 这个头，如果响应头部没有通过的信息，就会报跨域的错误。</p>
+<p><strong>解决方法</strong>： 后台代码需要增加头信息 <code>Access-Control-Allow-Headers: Content-Type</code></p>
+<blockquote>
+<p>非简单请求每个跨域请求都会请求两次，这样非常影响效率，响应可以增加一个头信息，来缓存预检命令，<code>Access-Control-Max-Age: 3600</code> 这个头信息的意思是告诉浏览器，在3600秒内，可以缓存预检命令的结果，不需要发送预检命令。</p>
+</blockquote>
+<p><strong>带cookie的跨域</strong>：当响应头<code>Access-Control-Allow-Origin: *</code> 时，是不能满足带cookie的跨域请求的，前端设置 ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$.aiax(&#123;</span><br><span class="line">	...,</span><br><span class="line">	xhrFields:&#123;</span><br><span class="line">		withCredentials:true</span><br><span class="line">	&#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>后端设置头信息 <code>Axxess-Control-Allow-Origin: http://localhost:8081</code>和<code>Access-Control-Allow-Credentials: true</code></p>
+<p>但是这样做之后，浏览器只会允许 <code>http://localhost:8081</code> 这个地址来跨域，如果需要多个地址请求实现跨域如何实现呢？<br>之前知识点： <strong>浏览器发现请求是跨域的时候，他会在请求头增加当前域的字段Origin: <a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a> 等请求返回来，他会检查响应头里面的字段信息，是否允许跨域。</strong><br>后端可以动态的去取 <code>Origin</code>这个字段的值，如果不为空，则 <code>Axxess-Control-Allow-Origin: Origin</code>,现在就可以支持任何的跨域调用了。</p>
+<h5 id="带自定头的跨域"><a href="#带自定头的跨域" class="headerlink" title="带自定头的跨域"></a>带自定头的跨域</h5><p>首先前端定义：</p>
+<p><img src="http://ozrm3516s.bkt.clouddn.com/110b9eb47d145042bd41fe9cd5c0461c.jpg" alt=""></p>
+<p>可以发现请求头部增加了如下内容：<br><img src="http://ozrm3516s.bkt.clouddn.com/c5ff5786443e2cc9f4a032414eda975f.jpg" alt=""></p>
+<p>此时去请求发现报错<br><img src="http://ozrm3516s.bkt.clouddn.com/1839df8c3a07b8c2dbae88d03e65484f.jpg" alt=""><br>报错信息的意思是：在返回头<code>Access-Control-Allow-Headers</code> 字段中没有 <code>x-header2</code> 的信息，把 <code>x-header1 x-header2</code> 加进去就行了，最好是动态的获取请求头<code>Origin</code>里面的值去添加，这样就支持所有的自定义头部了。</p>
+<h5 id="虚拟主机上设置响应头信息"><a href="#虚拟主机上设置响应头信息" class="headerlink" title="虚拟主机上设置响应头信息"></a>虚拟主机上设置响应头信息</h5><p>之前我们是直接在应用服务器上面修改响应头信息，现在我们建立一个虚拟主机，在虚拟主机上面修改响应头信息<br>被调用方的虚拟主机的配置。</p>
+<p>第一步首先配置HOST文件eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 b.com</span><br></pre></td></tr></table></figure>
+<p>打开nginx中的config目录 新建一个 <code>vhost</code>目录，在里面新建虚拟主机的配置文件。打开 <code>nginx.config</code> 文件,在最后增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include vhost/*.conf  //让nginx载入这个目录下的所有.conf文件</span><br></pre></td></tr></table></figure>
+<p>在vhost目录中新建一个 <code>b.com.config</code>文件，里面写入下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">    listen 80;        //监听的端口</span><br><span class="line">    server_name b.com;   //监听的域名</span><br><span class="line">    location /&#123;</span><br><span class="line">        proxy_pass http://localhost:8080/; //把所有的请求都转到 8080,监听80端口，域名为b.com</span><br><span class="line">        add_header Access-Control-Allow-Methods *;</span><br><span class="line">        add_header Access-Control-Max-Age 3600;</span><br><span class="line">        add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">        add_header Access-Control-Allow-Origin $http_origin;  //获取请求头里面的值</span><br><span class="line">        add_header Access-Control-Allow-Headers $http_access_control_request_headers;</span><br><span class="line">        if ($request_method = OPTIONS)&#123;</span><br><span class="line">            return 200;   //把跨域的预检命令直接在虚拟主机上处理，不经过应用主机。</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动nginx <code>start nginx</code></p>
+<p>4.调用方解决跨域<br>通过反向代理来实现,隐藏跨域。</p>
+<blockquote>
+<h2 id="正向代理：它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求，正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求。"><a href="#正向代理：它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求，正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求。" class="headerlink" title="正向代理：它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求，正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求。"></a>正向代理：它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求，正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求。</h2><h2 id="反向代理-它隐藏了真实的服务端，当我们请求-www-baidu-com-的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，www-baidu-com-就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。"><a href="#反向代理-它隐藏了真实的服务端，当我们请求-www-baidu-com-的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，www-baidu-com-就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。" class="headerlink" title="反向代理:它隐藏了真实的服务端，当我们请求 www.baidu.com 的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，www.baidu.com 就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。"></a>反向代理:它隐藏了真实的服务端，当我们请求 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。</h2><p>两者的区别在于代理的对象不一样：正向代理代理的对象是客户端，反向代理代理的对象是服务端。<br><a href="https://www.zhihu.com/question/24723688" target="_blank" rel="noopener">摘自知乎-刘志军的回答</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 b.com a.com //增加一个a.com，用它表示调用方的虚拟主机</span><br></pre></td></tr></table></figure>
+<p>在vhost目录中新建一个 <code>a.com.config</code>文件，里面写入下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80:</span><br><span class="line">    server_name a.com;</span><br><span class="line"></span><br><span class="line">    location /&#123;</span><br><span class="line">        proxy_pass http://localhost:8081/;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location /ajaxserver&#123; //把我们要调用的服务器代理成 ajaxserver</span><br><span class="line">        proxy_pass http://localhost:8080/test/; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请求的代码中修改请求的基本前缀<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var base = &apos;/ajaxserver&apos;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #999;font-size:14px;">-------------------------The End-------------------------</div>
+    
+</div>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ajax/" rel="tag"><i class="fa fa-tag"></i> ajax</a>
+          
+            <a href="/tags/跨域/" rel="tag"><i class="fa fa-tag"></i> 跨域</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/24/react-redux-使用装饰器优化connect代码/" rel="next" title="react-redux_使用装饰器优化connect代码">
+                <i class="fa fa-chevron-left"></i> react-redux_使用装饰器优化connect代码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/25/js代码片段难点集合/" rel="prev" title="js代码片段难点集合">
+                js代码片段难点集合 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/img.jpg"
+                alt="yewenxiang" />
+            
+              <p class="site-author-name" itemprop="name">yewenxiang</p>
+              <p class="site-description motion-element" itemprop="description">叶文翔的个人博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yewenxinag23@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么会发生AJAX跨域？"><span class="nav-number">1.</span> <span class="nav-text">为什么会发生AJAX跨域？</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-浏览器限制"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.浏览器限制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-跨域"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.跨域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-发送的是-XHR-XMLHttpRequest-请求"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.发送的是 XHR(XMLHttpRequest) 请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决问题的思路"><span class="nav-number">2.</span> <span class="nav-text">解决问题的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单请求和非简单请求"><span class="nav-number">2.0.1.</span> <span class="nav-text">简单请求和非简单请求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#带自定头的跨域"><span class="nav-number">2.0.2.</span> <span class="nav-text">带自定头的跨域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#虚拟主机上设置响应头信息"><span class="nav-number">2.0.3.</span> <span class="nav-text">虚拟主机上设置响应头信息</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正向代理：它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求，正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求。"><span class="nav-number"></span> <span class="nav-text">正向代理：它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求，正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁，客户端请求的服务都被代理服务器代替来请求。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反向代理-它隐藏了真实的服务端，当我们请求-www-baidu-com-的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，www-baidu-com-就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。"><span class="nav-number"></span> <span class="nav-text">反向代理:它隐藏了真实的服务端，当我们请求 www.baidu.com 的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，www.baidu.com 就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yewenxiang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("U16ysaewYydQBEaN4VYVo1aA-gzGzoHsz", "xtEeRAM38GYoHv9f7jPMBm7l");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  	 <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("U16ysaewYydQBEaN4VYVo1aA-gzGzoHsz", "xtEeRAM38GYoHv9f7jPMBm7l");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).text() + ': 0';
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		// addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		// showTime(Counter);
+	}
+});
+</script>
+  
+</body>
+</html>
