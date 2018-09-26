@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/110b9eb47d145042bd41fe9cd5c0461c.jpg">
 <meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/c5ff5786443e2cc9f4a032414eda975f.jpg">
 <meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/1839df8c3a07b8c2dbae88d03e65484f.jpg">
-<meta property="og:updated_time" content="2018-09-26T08:59:13.406Z">
+<meta property="og:updated_time" content="2018-09-26T09:22:57.024Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax跨域解决思路">
 <meta name="twitter:description" content="为什么会发生AJAX跨域？浏览器限制当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。 跨域发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。 发送的是 XHR(XMLHttpRequest) 请求如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。 解决问题的思路1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动chrome。">
@@ -421,11 +421,11 @@
 <p><img src="http://ozrm3516s.bkt.clouddn.com/110b9eb47d145042bd41fe9cd5c0461c.jpg" alt=""></p>
 <p>可以发现请求头部增加了如下内容：<br><img src="http://ozrm3516s.bkt.clouddn.com/c5ff5786443e2cc9f4a032414eda975f.jpg" alt=""></p>
 <p>此时去请求发现报错<br><img src="http://ozrm3516s.bkt.clouddn.com/1839df8c3a07b8c2dbae88d03e65484f.jpg" alt=""><br>报错信息的意思是：在返回头<code>Access-Control-Allow-Headers</code> 字段中没有 <code>x-header2</code> 的信息，把 <code>x-header1 x-header2</code> 加进去就行了，最好是动态的获取请求头<code>Origin</code>里面的值去添加，这样就支持所有的自定义头部了。</p>
-<h3 id="虚拟主机上设置响应头信息"><a href="#虚拟主机上设置响应头信息" class="headerlink" title="虚拟主机上设置响应头信息"></a>虚拟主机上设置响应头信息</h3><p>之前我们是直接在应用服务器上面修改响应头信息，现在我们建立一个虚拟主机，在虚拟主机上面修改响应头信息<br>被调用方的虚拟主机的配置。</p>
+<h3 id="虚拟主机上设置响应头信息"><a href="#虚拟主机上设置响应头信息" class="headerlink" title="虚拟主机上设置响应头信息"></a>虚拟主机上设置响应头信息</h3><p>之前我们是直接在应用服务器上面修改响应头信息，现在我们建立一个虚拟主机，在虚拟主机上面修改响应头信息<br>被调用方的虚拟主机的配置。</p>
 <p>第一步首先配置HOST文件eg:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> b.com</span><br></pre></td></tr></table></figure>
-<p>打开nginx中的config目录 新建一个 <code>vhost</code>目录，在里面新建虚拟主机的配置文件。打开 <code>nginx.config</code> 文件,在最后增加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include vhost/*.conf  //让nginx载入这个目录下的所有.conf文件</span><br></pre></td></tr></table></figure>
+<p>打开nginx中的config目录 新建一个 <code>vhost</code>目录，在里面新建虚拟主机的配置文件。打开 <code>nginx.config</code> 文件,在最后增加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include vhost/*.conf  //让nginx载入这个目录下的所有.conf文件</span><br></pre></td></tr></table></figure>
 <p>在vhost目录中新建一个 <code>b.com.config</code>文件，里面写入下面代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">    listen 80;        //监听的端口</span><br><span class="line">    server_name b.com;   //监听的域名</span><br><span class="line">    location /&#123;</span><br><span class="line">        proxy_pass http://localhost:8080/; //把所有的请求都转到 8080,监听80端口，域名为b.com</span><br><span class="line">        add_header Access-Control-Allow-Methods *;</span><br><span class="line">        add_header Access-Control-Max-Age 3600;</span><br><span class="line">        add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">        add_header Access-Control-Allow-Origin $http_origin;  //获取请求头里面的值</span><br><span class="line">        add_header Access-Control-Allow-Headers $http_access_control_request_headers;</span><br><span class="line">        if ($request_method = OPTIONS)&#123;</span><br><span class="line">            return 200;   //把跨域的预检命令直接在虚拟主机上处理，不经过应用主机。</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>启动nginx <code>start nginx</code></p>

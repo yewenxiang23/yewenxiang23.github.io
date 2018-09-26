@@ -91,7 +91,7 @@
 <meta property="og:description" content="创建12&amp;gt; post = &amp;#123;&quot;title&quot;: &quot;my blog post&quot;, &quot;content&quot;:&quot;here&apos;s my blog post&quot;, &quot;date&quot;: new Date()&amp;#125;&amp;gt; db.blog.insert(post) javascript shell 中， db 命令现当前所在的数据库，上面代码，在当前数据库中的 blog集合 插入 post文档。可以使用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/08f45831e2748309022acff66c093d84.jpg">
-<meta property="og:updated_time" content="2018-09-24T15:50:50.588Z">
+<meta property="og:updated_time" content="2018-09-26T09:29:17.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoDB操作">
 <meta name="twitter:description" content="创建12&amp;gt; post = &amp;#123;&quot;title&quot;: &quot;my blog post&quot;, &quot;content&quot;:&quot;here&apos;s my blog post&quot;, &quot;date&quot;: new Date()&amp;#125;&amp;gt; db.blog.insert(post) javascript shell 中， db 命令现当前所在的数据库，上面代码，在当前数据库中的 blog集合 插入 post文档。可以使用">
@@ -439,7 +439,7 @@
 <blockquote>
 <p>如果这个文档含有”_id” 键，save会调用 upsert。否则会调用插入。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; var x = db.foo.findOne()</span><br><span class="line">&gt; x.num = 42</span><br><span class="line"></span><br><span class="line">&gt; db.foo.save(x)</span><br><span class="line"><span class="comment"># 免去了 update 的查询条件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var x = db.foo.findOne()</span><br><span class="line">x.num = 42</span><br><span class="line"></span><br><span class="line">db.foo.save(x)</span><br><span class="line"><span class="comment"># 免去了 update 的查询条件</span></span><br></pre></td></tr></table></figure>
 <h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>remove: 从数据库永久删除文档，<strong>在传空对象调用，会删除一个集合内所有的文档</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.blog.remove(&#123;title: &quot;my blog post&quot;&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="shell技巧"><a href="#shell技巧" class="headerlink" title="shell技巧"></a>shell技巧</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.help()</span><br><span class="line"><span class="comment"># 查看数据库级别的入门命令</span></span><br><span class="line"></span><br><span class="line">&gt; db.foo.help()</span><br><span class="line"><span class="comment"># 查看集合相关命令</span></span><br></pre></td></tr></table></figure>
