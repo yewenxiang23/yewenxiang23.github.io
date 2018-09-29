@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="pug," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="命令行中的pug 安装pug全局安装pug12$ npm install --global pug$ npm install --global pug-cli 编译pug文件 1$ pug -P -w index.pug  -P 编译后的html便于查看，保留空白节点 -w 持续监控文件修改，修改马上编译   类、ID、属性123h1#title(class=&amp;apos;title2&amp;apos;)">
+<meta name="keywords" content="pug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pug">
+<meta property="og:url" content="http://www.ywx.store/2018/09/29/pug/index.html">
+<meta property="og:site_name" content="博客">
+<meta property="og:description" content="命令行中的pug 安装pug全局安装pug12$ npm install --global pug$ npm install --global pug-cli 编译pug文件 1$ pug -P -w index.pug  -P 编译后的html便于查看，保留空白节点 -w 持续监控文件修改，修改马上编译   类、ID、属性123h1#title(class=&amp;apos;title2&amp;apos;)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/40657433d833f8f38da2d43957d6f192.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/e0d6e9f3d393fb1a1ff5bf37c31ebf84.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/6e080cbc7542b6e4a4ba5a2e98d64ad0.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/35902ad8730e1e64d88f899a066b97a2.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/5e4e376714cfbecbc6ed169882b23ae1.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/c6a3d1d5018256c566288f0b02f3de5f.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/ad235cac2da68f26f454927d80499f32.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/2c9b11b6a37aac351cb6bf3abc535330.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/ef4072ed06a96d4ea22c66b7935e7629.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/4c4f7f745d0eaa59079f9dd379391db1.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/a5e7fcbf8173d407aaa4e9e1525323ba.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/32bf87aadb4dbb6eb0dfe23a19ae79c6.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/242a9d04e9cac9b7583fdb749c93479f.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/505a379f4e45b7754d547a2bafd3f336.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/496edf3cec5bded29c9fd22186e13658.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/7d51cbd8aed86af7043f6e8c3c8fad34.png">
+<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/9433700fd6d5d3569c20cbbebc9b663d.png">
+<meta property="og:updated_time" content="2018-09-29T03:42:54.123Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pug">
+<meta name="twitter:description" content="命令行中的pug 安装pug全局安装pug12$ npm install --global pug$ npm install --global pug-cli 编译pug文件 1$ pug -P -w index.pug  -P 编译后的html便于查看，保留空白节点 -w 持续监控文件修改，修改马上编译   类、ID、属性123h1#title(class=&amp;apos;title2&amp;apos;)">
+<meta name="twitter:image" content="http://ozrm3516s.bkt.clouddn.com/40657433d833f8f38da2d43957d6f192.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.ywx.store/2018/09/29/pug/"/>
+
+
+
+
+
+  <title>pug | 博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/29/pug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yewenxiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/img.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">pug</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-29T11:39:39+08:00">
+                2018-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/29/pug/" class="leancloud_visitors" data-flag-title="pug">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="命令行中的pug"><a href="#命令行中的pug" class="headerlink" title="命令行中的pug"></a>命令行中的pug</h3><p><img src="http://ozrm3516s.bkt.clouddn.com/40657433d833f8f38da2d43957d6f192.png" alt=""></p>
+<h3 id="安装pug"><a href="#安装pug" class="headerlink" title="安装pug"></a>安装pug</h3><p>全局安装pug<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --global pug</span><br><span class="line">$ npm install --global pug-cli</span><br></pre></td></tr></table></figure></p>
+<p>编译pug文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pug -P -w index.pug</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-P</code> 编译后的html便于查看，保留空白节点</li>
+<li><code>-w</code> 持续监控文件修改，修改马上编译</li>
+</ul>
+<p><img src="http://ozrm3516s.bkt.clouddn.com/e0d6e9f3d393fb1a1ff5bf37c31ebf84.png" alt=""></p>
+<h3 id="类、ID、属性"><a href="#类、ID、属性" class="headerlink" title="类、ID、属性"></a>类、ID、属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1#title(class=&apos;title2&apos;).title pug stydy</span><br><span class="line">#test.test</span><br><span class="line">input(checked,value=&apos;ye&apos;)</span><br></pre></td></tr></table></figure>
+<p>编译后<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"title2 title"</span> <span class="attr">id</span>=<span class="string">"title"</span>&gt;</span>pug stydy<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"test"</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">checked</span> <span class="attr">value</span>=<span class="string">"ye"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>属性一般在标签后的括号里面，用逗号隔开。</li>
+<li>类和ID有点特殊，可以直接在标签后面以链接的形式来写，当然由于也属于属性，也可以使用括号包裹的写法</li>
+<li>div标签可以省略， <code>div#test.test</code> 等价于 <code>#test.test</code> 。</li>
+<li>对于没有属性值的直接写就行了，比如 input 里面的checked.</li>
+</ul>
+<h3 id="多行文本"><a href="#多行文本" class="headerlink" title="多行文本"></a>多行文本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p</span><br><span class="line">  | 1. aa</span><br><span class="line">  | 2. bb</span><br><span class="line">  | 3. cc</span><br></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p.</span><br><span class="line">  1. aa</span><br><span class="line">  2. bb</span><br><span class="line">  3. cc</span><br></pre></td></tr></table></figure></p>
+<p>编译后<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  1. aa</span><br><span class="line">  2. bb</span><br><span class="line">  3. cc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="多行文本中标签的写法分成两种"><a href="#多行文本中标签的写法分成两种" class="headerlink" title="多行文本中标签的写法分成两种"></a>多行文本中标签的写法分成两种</h4><p>第一种是带点的纯文本的方式<br><img src="http://ozrm3516s.bkt.clouddn.com/6e080cbc7542b6e4a4ba5a2e98d64ad0.png" alt=""></p>
+<p>第二种采用缩进的节点方式来写，把文本看做一个文本节点<br><img src="http://ozrm3516s.bkt.clouddn.com/35902ad8730e1e64d88f899a066b97a2.png" alt=""></p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p><img src="http://ozrm3516s.bkt.clouddn.com/5e4e376714cfbecbc6ed169882b23ae1.png" alt=""></p>
+<p>对于IE的条件注释<br>)![pug5](./someImg/pug5.png</p>
+<h3 id="行内的style和script写法"><a href="#行内的style和script写法" class="headerlink" title="行内的style和script写法"></a>行内的style和script写法</h3><p><img src="http://ozrm3516s.bkt.clouddn.com/c6a3d1d5018256c566288f0b02f3de5f.png" alt=""></p>
+<h3 id="声明变量和替换数据"><a href="#声明变量和替换数据" class="headerlink" title="声明变量和替换数据"></a>声明变量和替换数据</h3><h4 id="在html中声明变量"><a href="#在html中声明变量" class="headerlink" title="在html中声明变量"></a>在html中声明变量</h4><p>括号里面可以对变量做一些js的处理<br><img src="http://ozrm3516s.bkt.clouddn.com/ad235cac2da68f26f454927d80499f32.png" alt=""></p>
+<h4 id="命令行中传值"><a href="#命令行中传值" class="headerlink" title="命令行中传值"></a>命令行中传值</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pug -P -w index.pug --obj <span class="string">'&#123;"name":"xiangwang"&#125;'</span></span><br></pre></td></tr></table></figure>
+<p>可以看到页面中接收到了 name 这个变量的值</p>
+<blockquote>
+<p>如果html中声明的变量和命令行中的变量同名，则html中的变量优先级高</p>
+</blockquote>
+<h4 id="通过json文件传变量"><a href="#通过json文件传变量" class="headerlink" title="通过json文件传变量"></a>通过json文件传变量</h4><p>创建一个json文件然后命令行中执行以下代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pug -P -w index.pug --O data.json</span><br></pre></td></tr></table></figure></p>
+<h3 id="安全转义与非转义"><a href="#安全转义与非转义" class="headerlink" title="安全转义与非转义"></a>安全转义与非转义</h3><p><code>安全转义</code> 也就是有时候我们希望页面中显示标签，也就是html中是转义后的字符。<br><img src="http://ozrm3516s.bkt.clouddn.com/2c9b11b6a37aac351cb6bf3abc535330.png" alt=""></p>
+<p><code>非安全转义</code> 有时候我们就是希望html中显示的就是标签<br><img src="http://ozrm3516s.bkt.clouddn.com/ef4072ed06a96d4ea22c66b7935e7629.png" alt=""></p>
+<h4 id="其他的方式"><a href="#其他的方式" class="headerlink" title="其他的方式"></a>其他的方式</h4><p>和上面的结果一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p= htmlData</span><br><span class="line">p!= htmlData</span><br></pre></td></tr></table></figure></p>
+<p>如果我们有时候想页面中输出 <code>#{}</code>和<code>!{}</code> 怎么办呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p \#&#123;htmlData&#125;</span><br><span class="line">p !#&#123;htmlData&#125;</span><br></pre></td></tr></table></figure>
+<p>就显示成了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>#&#123;htmlData&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>!&#123;htmlData&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="流程代码-for-each-while"><a href="#流程代码-for-each-while" class="headerlink" title="流程代码 for-each-while"></a>流程代码 for-each-while</h3><h4 id="for和each的使用方式"><a href="#for和each的使用方式" class="headerlink" title="for和each的使用方式"></a>for和each的使用方式</h4><p><img src="http://ozrm3516s.bkt.clouddn.com/4c4f7f745d0eaa59079f9dd379391db1.png" alt=""></p>
+<h4 id="white使用方式"><a href="#white使用方式" class="headerlink" title="white使用方式"></a>white使用方式</h4><p><img src="http://ozrm3516s.bkt.clouddn.com/a5e7fcbf8173d407aaa4e9e1525323ba.png" alt=""></p>
+<h3 id="流程代码-if-else-unless-swic"><a href="#流程代码-if-else-unless-swic" class="headerlink" title="流程代码 if-else-unless-swic"></a>流程代码 if-else-unless-swic</h3><h4 id="if-else-的使用方式"><a href="#if-else-的使用方式" class="headerlink" title="if-else 的使用方式"></a>if-else 的使用方式</h4><p><img src="http://ozrm3516s.bkt.clouddn.com/32bf87aadb4dbb6eb0dfe23a19ae79c6.png" alt=""></p>
+<h4 id="unless（除非）"><a href="#unless（除非）" class="headerlink" title="unless（除非）"></a>unless（除非）</h4><p>如果是 false 就会往先执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">unless !what</span><br><span class="line">  p #&#123;what.length&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="case-when"><a href="#case-when" class="headerlink" title="case-when"></a>case-when</h4><p>switch 语句是if-else-if 的兄弟语句,我们在 pug中可以使用 cass-when 来实现的<br><img src="http://ozrm3516s.bkt.clouddn.com/242a9d04e9cac9b7583fdb749c93479f.png" alt=""></p>
+<h3 id="mixin"><a href="#mixin" class="headerlink" title="mixin"></a>mixin</h3><p>使用 <code>mixin</code> 可以让pug的代码块重用,编译时会转换 javascript 中的函数，可以看做是一个函数，既然是函数，就可以传递参数<br><img src="http://ozrm3516s.bkt.clouddn.com/505a379f4e45b7754d547a2bafd3f336.png" alt=""></p>
+<h4 id="mixin的嵌套"><a href="#mixin的嵌套" class="headerlink" title="mixin的嵌套"></a>mixin的嵌套</h4><p><img src="http://ozrm3516s.bkt.clouddn.com/496edf3cec5bded29c9fd22186e13658.png" alt=""></p>
+<h4 id="内联mixin代码块"><a href="#内联mixin代码块" class="headerlink" title="内联mixin代码块"></a>内联mixin代码块</h4><p><img src="http://ozrm3516s.bkt.clouddn.com/7d51cbd8aed86af7043f6e8c3c8fad34.png" alt=""></p>
+<p>解释：调用 <code>team</code>函数的时候，下面包含一个 <code>p Good job!</code> 就代表代码块<code>block</code>，注意缩进关系。函数中说明的是，如果有代码块就执行代码块，否则执行<code>p no team</code>。</p>
+<p>除了代码块和文本，mixin还支持传递属性，比如传递classname<br><img src="http://ozrm3516s.bkt.clouddn.com/9433700fd6d5d3569c20cbbebc9b663d.png" alt=""></p>
+<h3 id="pug模板的继承"><a href="#pug模板的继承" class="headerlink" title="pug模板的继承"></a>pug模板的继承</h3><p>pug通过 <code>block</code> 和 <code>extends</code> 这两个关键字来实现模板的继承，一个块可以看做是一个block，它在子模板中来实现，同时支持递归。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//- layout.pug</span><br><span class="line">html</span><br><span class="line">  head</span><br><span class="line">    title My Site - #&#123;title&#125;</span><br><span class="line">    block scripts</span><br><span class="line">      script(src=&apos;/jquery.js&apos;)</span><br><span class="line">  body</span><br><span class="line">    block content</span><br><span class="line">    block foot</span><br><span class="line">      #footer</span><br><span class="line">        p some footer content</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//- pet.pug</span><br><span class="line">p= petName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//- page-a.pug</span><br><span class="line">extends layout.pug</span><br><span class="line"></span><br><span class="line">block scripts</span><br><span class="line">  script(src=&apos;/jquery.js&apos;)</span><br><span class="line">  script(src=&apos;/pets.js&apos;)</span><br><span class="line"></span><br><span class="line">block content</span><br><span class="line">  h1= title</span><br><span class="line">  - var pets = [&apos;cat&apos;, &apos;dog&apos;]</span><br><span class="line">  each petName in pets</span><br><span class="line">    include pet.pug</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>include pet.pug 就相当于把 pet.pug中的内容放在了这里</p>
+</blockquote>
+<p>编译 <code>page-a.pug</code> 后 page-a.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>My Site - <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/pets.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>cat<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>dog<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"footer"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>some footer content<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>block</code> 默认是替换<code>replace</code>，也就是不写的时候，当同名的时候会替换掉继承过来的 <code>block</code>，可以添加 <code>prepend</code> 或者 <code>append</code> 来实现 <code>block</code> 的合并</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//- layout.pug</span><br><span class="line">html</span><br><span class="line">  head</span><br><span class="line">    block head</span><br><span class="line">      script(src=&apos;/vendor/jquery.js&apos;)</span><br><span class="line">      script(src=&apos;/vendor/caustic.js&apos;)</span><br><span class="line">  body</span><br><span class="line">    block content</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//- page.pug</span><br><span class="line">extends layout.pug</span><br><span class="line"></span><br><span class="line">block append head</span><br><span class="line">  script(src=&apos;/vendor/three.js&apos;)</span><br><span class="line">  script(src=&apos;/game.js&apos;)</span><br></pre></td></tr></table></figure>
+<p>编译 <code>page.pug</code> 后，生成 <code>page.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/vendor/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/vendor/caustic.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/vendor/three.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/game.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="pug-api"><a href="#pug-api" class="headerlink" title="pug api"></a>pug api</h3><p>有五个核心的API：</p>
+<ul>
+<li>pug.compile(source,options)<ul>
+<li>source:string  pug模板的字符</li>
+<li>返回的是一个函数，这个函数是来生成HTML的，对这个函数也可以传入本地变量 eg <code>pug.compile(&#39;div #{course}&#39;,{})({course:&#39;pug&#39;})</code></li>
+</ul>
+</li>
+<li>pug.compileFile(path,options)</li>
+<li>pug.compileClient(source,options)</li>
+<li>pug.render(source,options)<ul>
+<li>source:string  pug模板的字符</li>
+<li>options 可以直接传入一个变量对象 例如 <code>{course:&#39;pug&#39;}</code></li>
+</ul>
+</li>
+<li>pug.renderFile(filename,options)<ul>
+<li>source:string pug模板的路径</li>
+<li>options 可以直接传入一个变量对象 例如 <code>{course:&#39;pug&#39;}</code></li>
+</ul>
+</li>
+</ul>
+<p>options参数是一个对象，可以设置以下属性，更多参考<a href="https://pugjs.org/api/reference.html#pugcompileclientsource-options" target="_blank" rel="noopener">pugAPI</a></p>
+<ul>
+<li>filename:string  正在编译的文件的名称,默认为pug。</li>
+<li>self:boolean 保持一个变量到 self 的 locals (命名空间)</li>
+<li>debug:boolean 开启调试模式</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #999;font-size:14px;">-------------------------The End-------------------------</div>
+    
+</div>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/pug/" rel="tag"><i class="fa fa-tag"></i> pug</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/29/gulp/" rel="next" title="gulp">
+                <i class="fa fa-chevron-left"></i> gulp
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/29/redux/" rel="prev" title="redux">
+                redux <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/img.jpg"
+                alt="yewenxiang" />
+            
+              <p class="site-author-name" itemprop="name">yewenxiang</p>
+              <p class="site-description motion-element" itemprop="description">叶文翔的个人博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yewenxinag23@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行中的pug"><span class="nav-number">1.</span> <span class="nav-text">命令行中的pug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装pug"><span class="nav-number">2.</span> <span class="nav-text">安装pug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类、ID、属性"><span class="nav-number">3.</span> <span class="nav-text">类、ID、属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行文本"><span class="nav-number">4.</span> <span class="nav-text">多行文本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多行文本中标签的写法分成两种"><span class="nav-number">4.1.</span> <span class="nav-text">多行文本中标签的写法分成两种</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">5.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行内的style和script写法"><span class="nav-number">6.</span> <span class="nav-text">行内的style和script写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明变量和替换数据"><span class="nav-number">7.</span> <span class="nav-text">声明变量和替换数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在html中声明变量"><span class="nav-number">7.1.</span> <span class="nav-text">在html中声明变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命令行中传值"><span class="nav-number">7.2.</span> <span class="nav-text">命令行中传值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过json文件传变量"><span class="nav-number">7.3.</span> <span class="nav-text">通过json文件传变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全转义与非转义"><span class="nav-number">8.</span> <span class="nav-text">安全转义与非转义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#其他的方式"><span class="nav-number">8.1.</span> <span class="nav-text">其他的方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程代码-for-each-while"><span class="nav-number">9.</span> <span class="nav-text">流程代码 for-each-while</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#for和each的使用方式"><span class="nav-number">9.1.</span> <span class="nav-text">for和each的使用方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#white使用方式"><span class="nav-number">9.2.</span> <span class="nav-text">white使用方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程代码-if-else-unless-swic"><span class="nav-number">10.</span> <span class="nav-text">流程代码 if-else-unless-swic</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if-else-的使用方式"><span class="nav-number">10.1.</span> <span class="nav-text">if-else 的使用方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unless（除非）"><span class="nav-number">10.2.</span> <span class="nav-text">unless（除非）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#case-when"><span class="nav-number">10.3.</span> <span class="nav-text">case-when</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mixin"><span class="nav-number">11.</span> <span class="nav-text">mixin</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mixin的嵌套"><span class="nav-number">11.1.</span> <span class="nav-text">mixin的嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内联mixin代码块"><span class="nav-number">11.2.</span> <span class="nav-text">内联mixin代码块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pug模板的继承"><span class="nav-number">12.</span> <span class="nav-text">pug模板的继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pug-api"><span class="nav-number">13.</span> <span class="nav-text">pug api</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yewenxiang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("U16ysaewYydQBEaN4VYVo1aA-gzGzoHsz", "xtEeRAM38GYoHv9f7jPMBm7l");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  	 <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("U16ysaewYydQBEaN4VYVo1aA-gzGzoHsz", "xtEeRAM38GYoHv9f7jPMBm7l");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).text() + ': 0';
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		// addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		// showTime(Counter);
+	}
+});
+</script>
+  
+</body>
+</html>

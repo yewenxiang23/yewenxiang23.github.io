@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/node异步编程方案/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/29/gulp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -309,7 +309,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/node异步编程方案/" itemprop="url">node异步编程方案</a></h1>
+                <a class="post-title-link" href="/2018/09/29/gulp/" itemprop="url">gulp</a></h1>
         
 
         <div class="post-meta">
@@ -321,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:51:30+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-29T11:36:13+08:00">
+                2018-09-29
               </time>
             
 
@@ -344,8 +344,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
+                  <a href="/categories/自动化工具/" itemprop="url" rel="index">
+                    <span itemprop="name">自动化工具</span>
                   </a>
                 </span>
 
@@ -361,7 +361,7 @@
 
           
           
-             <span id="/2018/09/24/node异步编程方案/" class="leancloud_visitors" data-flag-title="node异步编程方案">
+             <span id="/2018/09/29/gulp/" class="leancloud_visitors" data-flag-title="gulp">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -394,11 +394,17 @@
       
         
           
-          回调函数  (第一阶段)123456789101112function readFile (cb)&#123;	fs.readFile(path, (err, data) =&gt; &#123;		if (err) console.log(err)	    else console.log(dat
+          gulp的安装第一步安装gulp自动化工具
+1npm i -g gulp
+第二步初始化项目仓库
+12npm init在项目文件夹中输入，生成一个package.json
+第三步在项目的文件中安装一个gulp
+12npm i --save-dev gulp等价于  npm i -D gulp
+第四步安
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/node异步编程方案/#more" rel="contents">
+            <a class="btn" href="/2018/09/29/gulp/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -450,7 +456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/mongoDB操作/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/29/同步加载、异步加载、延迟加载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -469,7 +475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/mongoDB操作/" itemprop="url">mongoDB操作</a></h1>
+                <a class="post-title-link" href="/2018/09/29/同步加载、异步加载、延迟加载/" itemprop="url">同步加载、异步加载、延迟加载</a></h1>
         
 
         <div class="post-meta">
@@ -481,8 +487,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:50:17+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-29T11:29:12+08:00">
+                2018-09-29
               </time>
             
 
@@ -504,8 +510,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -521,7 +527,7 @@
 
           
           
-             <span id="/2018/09/24/mongoDB操作/" class="leancloud_visitors" data-flag-title="mongoDB操作">
+             <span id="/2018/09/29/同步加载、异步加载、延迟加载/" class="leancloud_visitors" data-flag-title="同步加载、异步加载、延迟加载">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -554,12 +560,12 @@
       
         
           
-          创建12&gt; post = &#123;"title": "my blog post", "content":"here's my blog post", "date": new Date()&#125;&gt; db.blog.insert(post)
-javascript shell 中， 
+          同步加载平常默认用的都是同步加载。如：&lt;script src=&quot;http://XXX.com/script.js&quot;&gt;&lt;/script&gt;同步模式又称阻塞模式，会阻止浏览器的后续处理，停止了后续的文件的解析，执行，如图像的渲染。
+一般的script标签（不带a
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/mongoDB操作/#more" rel="contents">
+            <a class="btn" href="/2018/09/29/同步加载、异步加载、延迟加载/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -611,7 +617,7 @@ javascript shell 中，
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/mongoose操作/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/29/flexbox弹性布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -630,7 +636,7 @@ javascript shell 中，
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/mongoose操作/" itemprop="url">mongoose操作</a></h1>
+                <a class="post-title-link" href="/2018/09/29/flexbox弹性布局/" itemprop="url">flexbox弹性布局</a></h1>
         
 
         <div class="post-meta">
@@ -642,8 +648,8 @@ javascript shell 中，
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:49:27+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-29T11:24:51+08:00">
+                2018-09-29
               </time>
             
 
@@ -653,28 +659,6 @@ javascript shell 中，
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -682,7 +666,7 @@ javascript shell 中，
 
           
           
-             <span id="/2018/09/24/mongoose操作/" class="leancloud_visitors" data-flag-title="mongoose操作">
+             <span id="/2018/09/29/flexbox弹性布局/" class="leancloud_visitors" data-flag-title="flexbox弹性布局">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -715,11 +699,16 @@ javascript shell 中，
       
         
           
-          简单的 mongoose 示例1234567891011121314151617181920212223242526272829const mongoose = require('mongoose')mongoose.connect("mongodb://localhost:27017/study"
+          任何一个容器都可以指定 Flex 布局
+123.box&#123;  display: flex;&#125;
+行内元素也可以使用 Flex 布局
+123.box&#123;  display: inline-flex;&#125;
+Webkit 内核的浏览器要加上 -webkit 前缀
+1234.
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/mongoose操作/#more" rel="contents">
+            <a class="btn" href="/2018/09/29/flexbox弹性布局/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -771,7 +760,7 @@ javascript shell 中，
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/puppeteer安装/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/响应式设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -790,7 +779,7 @@ javascript shell 中，
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/puppeteer安装/" itemprop="url">puppeteer安装</a></h1>
+                <a class="post-title-link" href="/2018/09/27/响应式设计/" itemprop="url">响应式设计</a></h1>
         
 
         <div class="post-meta">
@@ -802,8 +791,8 @@ javascript shell 中，
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:48:03+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:58:16+08:00">
+                2018-09-27
               </time>
             
 
@@ -813,28 +802,6 @@ javascript shell 中，
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -842,7 +809,7 @@ javascript shell 中，
 
           
           
-             <span id="/2018/09/24/puppeteer安装/" class="leancloud_visitors" data-flag-title="puppeteer安装">
+             <span id="/2018/09/27/响应式设计/" class="leancloud_visitors" data-flag-title="响应式设计">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -875,13 +842,16 @@ javascript shell 中，
       
         
           
-          puppeteer 在执行安装的过程中需要执行install.js，这里会下载Chromium，翻墙也下载失败，导致安装不成功，官网建议是进行跳过，解决办法：
-12&gt; npm i --save puppeteer --ignore-scripts#忽略 puppeteer js脚本的执行
-手动
+          为何移动设备优先？移动优先当代响应式设计的最佳流程：在制作响应式网站的时候，先搞定手机版，然后再去为更大设备去设计和开发。无论从界面设计还是代码执行效率的角度而言，移动优先都有明显优势。
+
+由简入繁
+
+定制自己的色盘
+Material Design Color Palette 选择两种颜色，第一种为
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/puppeteer安装/#more" rel="contents">
+            <a class="btn" href="/2018/09/27/响应式设计/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -933,7 +903,7 @@ javascript shell 中，
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/async控制并发数量/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/mongoDB如何搭建数据库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -952,7 +922,7 @@ javascript shell 中，
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/async控制并发数量/" itemprop="url">使用 async 控制并发数量</a></h1>
+                <a class="post-title-link" href="/2018/09/27/mongoDB如何搭建数据库/" itemprop="url">mongoDB如何搭建数据库</a></h1>
         
 
         <div class="post-meta">
@@ -964,8 +934,8 @@ javascript shell 中，
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:45:51+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:53:48+08:00">
+                2018-09-27
               </time>
             
 
@@ -987,8 +957,8 @@ javascript shell 中，
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
+                  <a href="/categories/mongoDB/" itemprop="url" rel="index">
+                    <span itemprop="name">mongoDB</span>
                   </a>
                 </span>
 
@@ -1004,7 +974,7 @@ javascript shell 中，
 
           
           
-             <span id="/2018/09/24/async控制并发数量/" class="leancloud_visitors" data-flag-title="使用 async 控制并发数量">
+             <span id="/2018/09/27/mongoDB如何搭建数据库/" class="leancloud_visitors" data-flag-title="mongoDB如何搭建数据库">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1037,11 +1007,16 @@ javascript shell 中，
       
         
           
-          1234567891011121314151617181920212223242526272829303132333435363738394041424344const eventproxy = require('eventproxy')const superagent = require('sup
+          MongoDB 基本概念
+ MongoDB 的官网
+ MongoDB 中文社区
+ MongoDB 中文网
+MongoDB：是一个数据库软件，有时候我们简称它叫一个数据库，但是其实一个 MongoDB 运行起来 可以里面同时运行多个数据库
+Database: 数据库。一般做法是，一个项目对应一个数据库
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/async控制并发数量/#more" rel="contents">
+            <a class="btn" href="/2018/09/27/mongoDB如何搭建数据库/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1093,7 +1068,7 @@ javascript shell 中，
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/正则表达式/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/react路由/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -1112,7 +1087,7 @@ javascript shell 中，
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/正则表达式/" itemprop="url">正则表达式</a></h1>
+                <a class="post-title-link" href="/2018/09/27/react路由/" itemprop="url">react路由</a></h1>
         
 
         <div class="post-meta">
@@ -1124,8 +1099,8 @@ javascript shell 中，
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:45:26+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:46:55+08:00">
+                2018-09-27
               </time>
             
 
@@ -1135,6 +1110,28 @@ javascript shell 中，
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -1142,7 +1139,7 @@ javascript shell 中，
 
           
           
-             <span id="/2018/09/24/正则表达式/" class="leancloud_visitors" data-flag-title="正则表达式">
+             <span id="/2018/09/27/react路由/" class="leancloud_visitors" data-flag-title="react路由">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1175,25 +1172,12 @@ javascript shell 中，
       
         
           
-          语法介绍元字符
-. 匹配除换行符以外的任意字符
-\w 匹配字母或数字或下划线或汉字
-\s 匹配任意的空白符
-\d 匹配数字
-\b 匹配单词的开始或结束
-^ 匹配字符串的开始
-$ 匹配字符串的结束
-
-限定符
-* 重复零次或更多次
-+ 重复一次或更多次
-? 重复零次或一次
-{n} 重复n次
-{n,} 重
+          基本用法使用时首先需要安装 react-router 这个包，Router 组件本身只是一个容器，真正的路由则需要通过 Route 组件定义。
+1234567import &#123; Router, Route, hashHistory &#125; from 'react-router';ren
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/正则表达式/#more" rel="contents">
+            <a class="btn" href="/2018/09/27/react路由/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1245,7 +1229,7 @@ $ 匹配字符串的结束
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/bash-command/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/react表单/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -1264,7 +1248,7 @@ $ 匹配字符串的结束
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/bash-command/" itemprop="url">常用命令</a></h1>
+                <a class="post-title-link" href="/2018/09/27/react表单/" itemprop="url">react表单</a></h1>
         
 
         <div class="post-meta">
@@ -1276,8 +1260,8 @@ $ 匹配字符串的结束
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:43:29+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:45:16+08:00">
+                2018-09-27
               </time>
             
 
@@ -1299,8 +1283,8 @@ $ 匹配字符串的结束
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/command/" itemprop="url" rel="index">
-                    <span itemprop="name">command</span>
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
                   </a>
                 </span>
 
@@ -1316,7 +1300,7 @@ $ 匹配字符串的结束
 
           
           
-             <span id="/2018/09/24/bash-command/" class="leancloud_visitors" data-flag-title="常用命令">
+             <span id="/2018/09/27/react表单/" class="leancloud_visitors" data-flag-title="react表单">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1349,13 +1333,15 @@ $ 匹配字符串的结束
       
         
           
-          
-升级react-native react-native-git-upgrade,直接升级到最新版本。升级到指定的版本 react-native-git-upgrade X.Y.Z。
-升级时遇到的问题 ,删除掉 &quot;react-native-camera&quot;: &quot;git+h
+          表单表单不同于其他 HTML 元素，因为它要响应用户的交互，显示不同的状态，所以在 React 里面会有点特殊。
+状态属性表单元素有这么几种状态属性：
+
+value 对应 &lt;input&gt; 和 &lt;textarea&gt;
+checked 对应 checkbox 和 radio 的 &
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/bash-command/#more" rel="contents">
+            <a class="btn" href="/2018/09/27/react表单/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1407,7 +1393,7 @@ $ 匹配字符串的结束
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/hexo/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/ref如何去使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -1426,7 +1412,7 @@ $ 匹配字符串的结束
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/24/hexo/" itemprop="url">hexo相关</a></h1>
+                <a class="post-title-link" href="/2018/09/27/ref如何去使用/" itemprop="url">ref如何去使用</a></h1>
         
 
         <div class="post-meta">
@@ -1438,8 +1424,8 @@ $ 匹配字符串的结束
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T23:40:58+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:43:53+08:00">
+                2018-09-27
               </time>
             
 
@@ -1461,8 +1447,8 @@ $ 匹配字符串的结束
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
                   </a>
                 </span>
 
@@ -1478,7 +1464,7 @@ $ 匹配字符串的结束
 
           
           
-             <span id="/2018/09/24/hexo/" class="leancloud_visitors" data-flag-title="hexo相关">
+             <span id="/2018/09/27/ref如何去使用/" class="leancloud_visitors" data-flag-title="ref如何去使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1511,12 +1497,16 @@ $ 匹配字符串的结束
       
         
           
-          1hexo clean &amp;&amp; hexo generate --deploy #自动部署
+          ref的作用获取DOM后可以方便结合现有非 react 类库的使用，通过 ref/refs 可以取得组件实例，进而取得原生节点，不过尽量通过 state/props 更新组件，不要使用该功能去更新组件的DOM
 
-          
+用来调用子组件里面的方法。
+用来获取页面的节点
+
+ref的使用方式三种方法都可以获取DO
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/24/hexo/#more" rel="contents">
+            <a class="btn" href="/2018/09/27/ref如何去使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1568,7 +1558,7 @@ $ 匹配字符串的结束
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/12/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/react生命周期/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -1587,7 +1577,7 @@ $ 匹配字符串的结束
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/12/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/09/27/react生命周期/" itemprop="url">react生命周期</a></h1>
         
 
         <div class="post-meta">
@@ -1599,8 +1589,8 @@ $ 匹配字符串的结束
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T17:18:34+08:00">
-                2018-09-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:41:00+08:00">
+                2018-09-27
               </time>
             
 
@@ -1622,8 +1612,8 @@ $ 匹配字符串的结束
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/测试分类/" itemprop="url" rel="index">
-                    <span itemprop="name">测试分类</span>
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
                   </a>
                 </span>
 
@@ -1639,7 +1629,7 @@ $ 匹配字符串的结束
 
           
           
-             <span id="/2018/09/12/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2018/09/27/react生命周期/" class="leancloud_visitors" data-flag-title="react生命周期">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1671,15 +1661,177 @@ $ 匹配字符串的结束
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+          
+          什么是组件的生命周期？一个 React 组件的各个生命阶段会自动触发一些函数，这些被称为生命周期函数。具体如下图：
+
+初始化:
+获取默认属性值 getDefaultProps() :在组件挂载之前调用一次。
+获取实例初始状态 getInitialState() :在组件类创建的时候调用一次，然后返回
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/12/hello-world/#more" rel="contents">
+            <a class="btn" href="/2018/09/27/react生命周期/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <div>
+      
+    </div>
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/27/react组件之间通信/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yewenxiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/img.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/27/react组件之间通信/" itemprop="url">react组件之间通信</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T16:39:41+08:00">
+                2018-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/27/react组件之间通信/" class="leancloud_visitors" data-flag-title="react组件之间通信">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          组件之间如何通信一个组件如果无法做到通信是无法得到很好的复用的，因为有时候组件复用我们希望组件的UI会有点点区别,下来实现一个简单的通信来说明。
+12345678910111213141516//Btn.jsimport React from &apos;react&apos;;class Btn 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/27/react组件之间通信/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1722,7 +1874,7 @@ $ 匹配字符串的结束
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1772,7 +1924,7 @@ $ 匹配字符串的结束
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1783,7 +1935,7 @@ $ 匹配字符串的结束
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1794,7 +1946,7 @@ $ 匹配字符串的结束
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
