@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="Context对象Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。 eg: 12345678const Koa = require(&apos;koa);const app = new Koa();const main = ctx =&amp;gt; &amp;#123;  ctx.response.body = &apos;Hello World">
+<meta name="description" content="Context对象Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。 eg: 12345678const Koa = require(&apos;koa&apos;);const app = new Koa();const main = ctx =&amp;gt; &amp;#123;  ctx.response.body = &apos;Hello Worl">
 <meta name="keywords" content="koa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="koa笔记">
-<meta property="og:url" content="http://www.ywx.store/2018/09/24/koa笔记/index.html">
+<meta property="og:url" content="https://www.ywx.store/2018/09/24/koa笔记/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="Context对象Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。 eg: 12345678const Koa = require(&apos;koa);const app = new Koa();const main = ctx =&amp;gt; &amp;#123;  ctx.response.body = &apos;Hello World">
+<meta property="og:description" content="Context对象Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。 eg: 12345678const Koa = require(&apos;koa&apos;);const app = new Koa();const main = ctx =&amp;gt; &amp;#123;  ctx.response.body = &apos;Hello Worl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-24T15:57:50.304Z">
+<meta property="og:updated_time" content="2018-10-10T01:10:22.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="koa笔记">
-<meta name="twitter:description" content="Context对象Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。 eg: 12345678const Koa = require(&apos;koa);const app = new Koa();const main = ctx =&amp;gt; &amp;#123;  ctx.response.body = &apos;Hello World">
+<meta name="twitter:description" content="Context对象Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。 eg: 12345678const Koa = require(&apos;koa&apos;);const app = new Koa();const main = ctx =&amp;gt; &amp;#123;  ctx.response.body = &apos;Hello Worl">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://www.ywx.store/2018/09/24/koa笔记/"/>
+  <link rel="canonical" href="https://www.ywx.store/2018/09/24/koa笔记/"/>
 
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ywx.store/2018/09/24/koa笔记/">
+    <link itemprop="mainEntityOfPage" href="https://www.ywx.store/2018/09/24/koa笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewenxiang">
@@ -392,7 +392,7 @@
       
         <h3 id="Context对象"><a href="#Context对象" class="headerlink" title="Context对象"></a>Context对象</h3><p>Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求和HTTP回复），通过给这个对象赋值可以控制返回给用户的内容。</p>
 <p>eg:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa);</span></span><br><span class="line"><span class="string">const app = new Koa();</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">const main = ctx =&gt; &#123;</span></span><br><span class="line"><span class="string">  ctx.response.body = '</span>Hello World<span class="string">';</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">app.use(main);</span></span><br><span class="line"><span class="string">app.listen(3000);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> main = <span class="function"><span class="params">ctx</span> =&gt;</span> &#123;</span><br><span class="line">  ctx.response.body = <span class="string">'Hello World'</span>;</span><br><span class="line">&#125;;</span><br><span class="line">app.use(main);</span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="给响应的body-添加内容"><a href="#给响应的body-添加内容" class="headerlink" title="给响应的body 添加内容"></a>给响应的body 添加内容</h3><p>Koa默认返回的类型是 <code>text/plain</code>。<br>可以使用 <code>ctx.request.accepts(&#39;json&#39;)</code> 来判断客户端接收什么数据，同时设置返回的类型 <code>ctx.response.type = &#39;json&#39;</code>。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ctx.response.body = <span class="string">'Hello World'</span>;               <span class="comment">//text</span></span><br><span class="line">ctx.response.body = &#123; <span class="attr">data</span>: <span class="string">'Hello World'</span> &#125;;     <span class="comment">//json</span></span><br><span class="line">ctx.response.body = <span class="string">'&lt;p&gt;Hello World&lt;/p&gt;'</span>;        <span class="comment">//html</span></span><br><span class="line">ctx.response.body = <span class="string">'&lt;data&gt;Hello World&lt;/data&gt;'</span>;  <span class="comment">//xml</span></span><br></pre></td></tr></table></figure>
 <h3 id="网页模板"><a href="#网页模板" class="headerlink" title="网页模板"></a>网页模板</h3><p>Koa先读取模板文件，然后返回给用户</p>
@@ -563,7 +563,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -574,7 +574,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -585,7 +585,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
