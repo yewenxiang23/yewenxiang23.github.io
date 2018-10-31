@@ -92,7 +92,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/04ae6c3dd528b8f6c24da0db04d68d6d.jpg">
 <meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/3f5c4badca2d136d2d66f0bacf02a560.png">
-<meta property="og:updated_time" content="2018-09-27T08:55:43.669Z">
+<meta property="og:updated_time" content="2018-10-25T09:08:10.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoDB如何搭建数据库">
 <meta name="twitter:description" content="MongoDB 基本概念  MongoDB 的官网  MongoDB 中文社区  MongoDB 中文网 MongoDB：是一个数据库软件，有时候我们简称它叫一个数据库，但是其实一个 MongoDB 运行起来 可以里面同时运行多个数据库 Database: 数据库。一般做法是，一个项目对应一个数据库。 Collection: 集合。类似于关系型数据库下的表的概念，例如全班同学信息。 Documen">
@@ -405,6 +405,7 @@
 <p><img src="http://ozrm3516s.bkt.clouddn.com/04ae6c3dd528b8f6c24da0db04d68d6d.jpg" alt=""></p>
 <p><img src="http://ozrm3516s.bkt.clouddn.com/3f5c4badca2d136d2d66f0bacf02a560.png" alt=""></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb</span><br></pre></td></tr></table></figure>
+<p>查看安装目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> mongod</span><br></pre></td></tr></table></figure></p>
 <h3 id="MongoDB启动与使用"><a href="#MongoDB启动与使用" class="headerlink" title="MongoDB启动与使用"></a>MongoDB启动与使用</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p data/db</span><br><span class="line">mongod --dbpath=./data/db</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew services start mongodb</span><br><span class="line">//使用homeBrew安装的 启动命令. </span><br><span class="line">brew services stop mongodb</span><br></pre></td></tr></table></figure>
 <p>一般在项目文件夹主目录建立一个  <code>data/db</code> 文件夹来当做数据库地址。<br><code>mkdir -p</code>  创建一个目录的时候，若其父目录不存在，则自动创建，而不是默认的报错,例如： <code>mkdir /home/a/b</code> 若<code>/home</code>目录下不存在a目录，则会报错。加上-p选项后，就会先建立a目录，然后在a目录下再建立b目录。</p>
@@ -586,7 +587,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -597,7 +598,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -608,7 +609,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
