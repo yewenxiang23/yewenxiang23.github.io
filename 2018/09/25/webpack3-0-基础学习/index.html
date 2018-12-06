@@ -90,15 +90,15 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="一个webpack demo 首先是建立项目结构  根目录新建 src 文件夹 (开发环境时的代码) 根目录新建 dist 文件夹（生产环境的代码）  webpack 打包的本质是把 src下的入口文件 entry.js 文件，及其相关联的文件,打包成bundle.js文件，并且放在 dist 文件夹下面  webpack 的打包命令：  如果是全局安装的webpack : $webpack sr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/3caf301e99825095a13d1236fe81c9ef.jpg">
-<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/6a40bdf7afecaf0890edc5c8b2864772.jpg">
-<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/e010ff487fdb149a1f383ee19751d060.jpg">
-<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/88e85a323ec8e312da34e551db8c2ec9.jpg">
-<meta property="og:updated_time" content="2018-09-24T16:05:43.629Z">
+<meta property="og:image" content="http://img.ywx.store/3caf301e99825095a13d1236fe81c9ef.jpg">
+<meta property="og:image" content="http://img.ywx.store/6a40bdf7afecaf0890edc5c8b2864772.jpg">
+<meta property="og:image" content="http://img.ywx.store/e010ff487fdb149a1f383ee19751d060.jpg">
+<meta property="og:image" content="http://img.ywx.store/88e85a323ec8e312da34e551db8c2ec9.jpg">
+<meta property="og:updated_time" content="2018-12-06T01:43:48.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack3.0+基础学习">
 <meta name="twitter:description" content="一个webpack demo 首先是建立项目结构  根目录新建 src 文件夹 (开发环境时的代码) 根目录新建 dist 文件夹（生产环境的代码）  webpack 打包的本质是把 src下的入口文件 entry.js 文件，及其相关联的文件,打包成bundle.js文件，并且放在 dist 文件夹下面  webpack 的打包命令：  如果是全局安装的webpack : $webpack sr">
-<meta name="twitter:image" content="http://ozrm3516s.bkt.clouddn.com/3caf301e99825095a13d1236fe81c9ef.jpg">
+<meta name="twitter:image" content="http://img.ywx.store/3caf301e99825095a13d1236fe81c9ef.jpg">
 
 
 
@@ -379,7 +379,7 @@
 <li>根目录新建 dist 文件夹（生产环境的代码）</li>
 </ul>
 <p>webpack 打包的本质是把 <strong>src</strong>下的入口文件 entry.js 文件，及其相关联的文件,打包成bundle.js文件，并且放在 <strong>dist</strong> 文件夹下面</p>
-<p><img src="http://ozrm3516s.bkt.clouddn.com/3caf301e99825095a13d1236fe81c9ef.jpg" alt=""></p>
+<p><img src="http://img.ywx.store/3caf301e99825095a13d1236fe81c9ef.jpg" alt=""></p>
 <p>webpack 的打包命令：</p>
 <ul>
 <li>如果是全局安装的webpack : <code>$webpack src/entry.js dist/bundle.js</code>。</li>
@@ -434,7 +434,7 @@
 <p>这里遇到了一个坑。。。</p>
 </blockquote>
 <p>接上一步开启服务器 <code>npm run server</code> ，命令行报错 ERROR in entry.js from UglifyJs<br>Unexpected token: name (urlParts) [entry.js:325,4]</p>
-<p><img src="http://ozrm3516s.bkt.clouddn.com/6a40bdf7afecaf0890edc5c8b2864772.jpg" alt=""></p>
+<p><img src="http://img.ywx.store/6a40bdf7afecaf0890edc5c8b2864772.jpg" alt=""></p>
 <p>原因在于：没有区分 <strong>开发环境</strong> 和 <strong>生产环境</strong> 。<br>开发环境中代码是不需要压缩的。如果压缩了，调试没有办法找到对应的行号。代码压缩只需要再 <strong>生产环境</strong> 中进行，在开发环境中压缩代码，跑服务器造成了冲突，具体情况不清楚。<br>正常的项目开发是不会产生这样的问题的，都会有一个 <strong>开发使用的配置文件</strong> 和 <strong>生产使用的配置文件</strong> 。</p>
 <h3 id="HTML文件的打包"><a href="#HTML文件的打包" class="headerlink" title="HTML文件的打包"></a>HTML文件的打包</h3><p>一般项目开发是严格区分 <strong>开发环境</strong> 和 <strong>生产环境</strong> 的，也就是 <code>src</code> 文件是我们的 <strong>开发环境</strong> 的项目代码文件夹，<code>dist</code> 文件夹是打包后自己生成的，不需要我们自己去创建。把 <code>index.html</code> 文件放在 <code>src</code> 目录下面，删除文件里面的 <code>script</code> 标签，<code>html-webpack-plugin</code> 会自动帮我们加入引入js的<code>script</code>标签。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D html-webpack-plugin</span><br></pre></td></tr></table></figure>
@@ -461,11 +461,11 @@
 <p>css loader 也需要做一些更改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   test: /\.css$/,</span><br><span class="line">   use: extractTextPlugin.extract(&#123;</span><br><span class="line">            fallback: &quot;style-loader&quot;,</span><br><span class="line">            use: &quot;css-loader&quot;</span><br><span class="line">   &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="publickPath设置"><a href="#publickPath设置" class="headerlink" title="publickPath设置"></a><strong>publickPath设置</strong></h4><p>打包代码，跑本地服务器，这时候发现图片没有了，查看打包后的项目结构，发现css文件中的路径有问题。</p>
-<p><img src="http://ozrm3516s.bkt.clouddn.com/e010ff487fdb149a1f383ee19751d060.jpg" alt=""></p>
+<p><img src="http://img.ywx.store/e010ff487fdb149a1f383ee19751d060.jpg" alt=""></p>
 <p>这时候需要设置 <code>publiPath</code> 公用路径，解决静态文件的路径问题。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"><span class="keyword">var</span> website = &#123;</span><br><span class="line">    publicPath:<span class="string">'http://192.168.1.105:1717/'</span> <span class="comment">//注意这里的斜杠，ip为服务器ip（在这里是你的计算机ip）</span></span><br><span class="line">&#125;</span><br><span class="line">output: &#123;</span><br><span class="line">		...</span><br><span class="line">        publicPath:website.publicPath</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>重新打包，css文件中图片的路径变为了正确的绝对路径。</p>
-<p><img src="http://ozrm3516s.bkt.clouddn.com/88e85a323ec8e312da34e551db8c2ec9.jpg" alt=""></p>
+<p><img src="http://img.ywx.store/88e85a323ec8e312da34e551db8c2ec9.jpg" alt=""></p>
 <h3 id="打包和分离LESS"><a href="#打包和分离LESS" class="headerlink" title="打包和分离LESS"></a><strong>打包和分离LESS</strong></h3><h4 id="打包LESS文件到-bundle-js-文件中"><a href="#打包LESS文件到-bundle-js-文件中" class="headerlink" title="打包LESS文件到 bundle.js 文件中"></a><strong>打包LESS文件到 bundle.js 文件中</strong></h4><p>首先需要安装 <code>less</code> 、 <code>less-loader</code> 这两个包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D less less-loader</span><br></pre></td></tr></table></figure></p>
 <p>webpack.config.js 配置</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [&#123;</span><br><span class="line">            test: <span class="regexp">/\.less$/</span>,</span><br><span class="line">            use: [&#123;</span><br><span class="line">                loader: <span class="string">"style-loader"</span> <span class="comment">// creates style nodes from JS strings</span></span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                loader: <span class="string">"css-loader"</span> <span class="comment">// translates CSS into CommonJS</span></span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                loader: <span class="string">"less-loader"</span> <span class="comment">// compiles Less to CSS</span></span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -638,7 +638,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

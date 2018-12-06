@@ -90,12 +90,12 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="常用快捷键 按F1查看快捷键命令(fn + f1) command + e 查看最近打开的文件 command + p 搜索文件  小程序尺寸和单位设计原则在小程序中单位主要分为两种 px 和 rpx，  rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 37">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ozrm3516s.bkt.clouddn.com/30709a25e89fb77fba09c7f75f1a8191.jpg">
-<meta property="og:updated_time" content="2018-10-08T14:02:47.353Z">
+<meta property="og:image" content="http://img.ywx.store/30709a25e89fb77fba09c7f75f1a8191.jpg">
+<meta property="og:updated_time" content="2018-12-06T01:43:48.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序基本知识">
 <meta name="twitter:description" content="常用快捷键 按F1查看快捷键命令(fn + f1) command + e 查看最近打开的文件 command + p 搜索文件  小程序尺寸和单位设计原则在小程序中单位主要分为两种 px 和 rpx，  rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 37">
-<meta name="twitter:image" content="http://ozrm3516s.bkt.clouddn.com/30709a25e89fb77fba09c7f75f1a8191.jpg">
+<meta name="twitter:image" content="http://img.ywx.store/30709a25e89fb77fba09c7f75f1a8191.jpg">
 
 
 
@@ -420,7 +420,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父组件.js</span></span><br><span class="line">Page(&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  onLike: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.detail) <span class="comment">//子组件传递过来的参数</span></span><br><span class="line">    <span class="comment">//执行业务逻辑</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h4 id="observer"><a href="#observer" class="headerlink" title="observer"></a>observer</h4><p>当组件中的从外部传递进来的属性值值被触发修改时，会执行这个函数</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">properties: &#123;</span><br><span class="line">  idnex: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    observer: <span class="function"><span class="keyword">function</span>(<span class="params">newVal, oldVal, changedPath</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">let</span> val = newVal &lt; <span class="number">10</span>? <span class="string">'0'</span> + newVal: newVal</span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        index: val   <span class="comment">//这里会发生内存泄漏...</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://ozrm3516s.bkt.clouddn.com/30709a25e89fb77fba09c7f75f1a8191.jpg" alt=""></p>
+<p><img src="http://img.ywx.store/30709a25e89fb77fba09c7f75f1a8191.jpg" alt=""></p>
 <h4 id="behaviors组件间代码共享"><a href="#behaviors组件间代码共享" class="headerlink" title="behaviors组件间代码共享"></a>behaviors组件间代码共享</h4><ul>
 <li>behaviors可以包含 properties、data、生命周期方法（和组件所包含的方法、属性一样）。</li>
 <li>每个组件可以引用多个behavior</li>
@@ -592,7 +592,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
