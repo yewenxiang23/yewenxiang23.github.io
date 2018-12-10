@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[七牛域名回收解决]]></title>
+    <url>%2F2018%2F12%2F10%2F%E4%B8%83%E7%89%9B%E5%9F%9F%E5%90%8D%E5%9B%9E%E6%94%B6%E8%A7%A3%E5%86%B3%2F</url>
+    <content type="text"><![CDATA[前言解决七牛测试域名回收，图片外链失效无法下载问题。 使用 qshell 克隆空间 首先安装 qshell 秘钥设置 1qshell account -- ak sk name 在 个人中心 &gt; 密钥管理 获取 ak sk，帐号名称 name 随便写 获取原空间文件名 列出原空间文件列表并保存到 list.txt 文件中1qshell listbucket 原bucket名 list.txt list.txt 文件中每行只保留文件名 1cat list.txt | awk '&#123;print $1&#125;' &gt;list_final.txt 这里会生成 list_final.txt 文件，全是格式化好的文件名称 复制原bucket到新bucket 1qshell batchcopy 原bucket名 新bucket名 list_final.txt 执行命令后克隆成功，如果有报错信息可能有图片克隆失败的情况 注意：这里两个bucket必须是同一地区。 下载 下载前首先在当前目录新建 download.txt 文件,然后在当前目录创建 img 目录 123456//download.txt&#123; &quot;dest_dir&quot;: &quot;./img/&quot;, #下载图片存放文件夹 &quot;bucket&quot;: &quot;yewenxiang&quot;, #需要下载的bucket空间名称 &quot;cdn_domain&quot;: &quot;pjiwcgz75.bkt.clouddn.com&quot; #需要下载的bucket空间外链，可在七牛查看&#125; 然后执行命令1qshell qdownload download.txt 这个bucket图片就全部下载在 img 文件中了。 使用已备案的域名绑定 在七牛的bucket中，点击绑定域名 点击创建，创建成功后复制 CNAME名称 由于我的域名是在阿里云注册的，所以要去阿里云域名控制台设置点击域名解析，添加一条 CNAME记录 记录值为在七牛复制的 CNAME值，主机记录需要和七牛中的名称一致，等待几分钟就绑定成功，使用 douban.ywx.store/文件名称 可访问图片。]]></content>
+      <tags>
+        <tag>七牛</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Electron应用升级]]></title>
     <url>%2F2018%2F12%2F05%2FElectron%E5%BA%94%E7%94%A8%E5%8D%87%E7%BA%A7%2F</url>
     <content type="text"><![CDATA[前言最近公司的一个vue项目，为了安全方面的考虑没有上传到服务器，每次打包需要群发，很是不方便，后来又考虑到使用 Electron打包成客户端，实现自动升级，在此做一些记录 桌面应用app图标图标分为三种，三个平台分别是： mac 的 .icns 后缀 window 的 .ico 后缀 (256x256px) linux 的 .png 后缀 (256x256px) .ico百度搜索有很多生成方式。 .icns生成: 在桌面新建 icons.iconset 文件夹,把原图片放在桌面。打开命令行cd到桌面，执行一下命令，生成不同尺寸的图片到 icons.iconset中 123456789101112sips -z 16 16 pic.png --out icons.iconset/icon_16x16.pngsips -z 32 32 pic.png --out icons.iconset/icon_16x16@2x.pngsips -z 32 32 pic.png --out icons.iconset/icon_32x32.pngsips -z 64 64 pic.png --out icons.iconset/icon_32x32@2x.pngsips -z 64 64 pic.png --out icons.iconset/icon_64x64.pngsips -z 128 128 pic.png --out icons.iconset/icon_64x64@2x.pngsips -z 128 128 pic.png --out icons.iconset/icon_128x128.pngsips -z 256 256 pic.png --out icons.iconset/icon_128x128@2x.pngsips -z 256 256 pic.png --out icons.iconset/icon_256x256.png sips -z 512 512 pic.png --out icons.iconset/icon_256x256@2x.png sips -z 512 512 pic.png --out icons.iconset/icon_512x512.pngsips -z 1024 1024 pic.png --out icons.iconset/icon_512x512@2x.png pic.png替换为你的图片文件路径，尺寸要求为1024x1024 然后生成 icns图标 1iconutil -c icns icons.iconset -o Icon.icns 目录结构]]></content>
