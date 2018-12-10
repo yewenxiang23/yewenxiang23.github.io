@@ -90,12 +90,12 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="创建12&amp;gt; post = &amp;#123;&quot;title&quot;: &quot;my blog post&quot;, &quot;content&quot;:&quot;here&apos;s my blog post&quot;, &quot;date&quot;: new Date()&amp;#125;&amp;gt; db.blog.insert(post) javascript shell 中， db 命令现当前所在的数据库，上面代码，在当前数据库中的 blog集合 插入 post文档。可以使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.ywx.store/08f45831e2748309022acff66c093d84.jpg">
-<meta property="og:updated_time" content="2018-12-06T01:43:48.246Z">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xtlf4syj30io05cq39.jpg">
+<meta property="og:updated_time" content="2018-12-10T12:47:46.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoDB操作">
 <meta name="twitter:description" content="创建12&amp;gt; post = &amp;#123;&quot;title&quot;: &quot;my blog post&quot;, &quot;content&quot;:&quot;here&apos;s my blog post&quot;, &quot;date&quot;: new Date()&amp;#125;&amp;gt; db.blog.insert(post) javascript shell 中， db 命令现当前所在的数据库，上面代码，在当前数据库中的 blog集合 插入 post文档。可以使用">
-<meta name="twitter:image" content="http://img.ywx.store/08f45831e2748309022acff66c093d84.jpg">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xtlf4syj30io05cq39.jpg">
 
 
 
@@ -418,7 +418,7 @@
 <p>可以修改类型:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.blog.update(&#123;<span class="string">"_id"</span>:ObjectId(<span class="string">"5b431136a1d1ea0fd260cc3e"</span>)&#125;, &#123;<span class="string">"<span class="variable">$set</span>"</span>:&#123;<span class="string">"favorite book"</span>: [<span class="string">"cat"</span>, <span class="string">"dog"</span>]&#125;&#125;)</span><br></pre></td></tr></table></figure>
 <p>修改嵌套文档</p>
-<p><img src="http://img.ywx.store/08f45831e2748309022acff66c093d84.jpg" alt=""></p>
+<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xtlf4syj30io05cq39.jpg" alt="image"></p>
 <h5 id="“-unset”修饰器"><a href="#“-unset”修饰器" class="headerlink" title="“$unset”修饰器"></a>“$unset”修饰器</h5><p>将一个键完全删除</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.blog.update(&#123;<span class="string">"_id"</span>:ObjectId(<span class="string">"5b431136a1d1ea0fd260cc3e"</span>)&#125;, &#123;<span class="string">"unset"</span>: &#123;<span class="string">"favorite book"</span>: 1&#125;&#125;)</span><br></pre></td></tr></table></figure>
 <h5 id="“-inc”修饰器"><a href="#“-inc”修饰器" class="headerlink" title="“$inc”修饰器"></a>“$inc”修饰器</h5><p>用来增加已有键的值，或者在键不存在时创建一个键。</p>

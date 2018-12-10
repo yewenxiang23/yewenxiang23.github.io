@@ -90,12 +90,12 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="客户端nginx路径信息配置文件路径: /usr/local/etc/nginx/nginx.conf服务器默认路径: /usr/local/var/www安装路径: /usr/local/Cellar/nginx/1.13.9 启动直接终端输入 nginx 启动，可以使用  ps -ef|grep nginx 来查看是否启动成功进程号为 3843在终端输入 kill -term  3843 来停">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.ywx.store/a6281635c5606767cbecf6528ce7ded9.jpg">
-<meta property="og:updated_time" content="2018-12-06T01:43:48.259Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y37zurlj30kb047t9i.jpg">
+<meta property="og:updated_time" content="2018-12-10T12:57:01.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx笔记">
 <meta name="twitter:description" content="客户端nginx路径信息配置文件路径: /usr/local/etc/nginx/nginx.conf服务器默认路径: /usr/local/var/www安装路径: /usr/local/Cellar/nginx/1.13.9 启动直接终端输入 nginx 启动，可以使用  ps -ef|grep nginx 来查看是否启动成功进程号为 3843在终端输入 kill -term  3843 来停">
-<meta name="twitter:image" content="http://img.ywx.store/a6281635c5606767cbecf6528ce7ded9.jpg">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y37zurlj30kb047t9i.jpg">
 
 
 
@@ -371,7 +371,7 @@
 
       
         <h5 id="客户端nginx路径信息"><a href="#客户端nginx路径信息" class="headerlink" title="客户端nginx路径信息"></a>客户端nginx路径信息</h5><p>配置文件路径: <code>/usr/local/etc/nginx/nginx.conf</code><br>服务器默认路径: <code>/usr/local/var/www</code><br>安装路径: <code>/usr/local/Cellar/nginx/1.13.9</code></p>
-<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><p>直接终端输入 <code>nginx</code> 启动，可以使用  <code>ps -ef|grep nginx</code> 来查看是否启动成功<br><img src="http://img.ywx.store/a6281635c5606767cbecf6528ce7ded9.jpg" alt=""><br>进程号为 3843<br>在终端输入 <code>kill -term  3843</code> 来停止进程</p>
+<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><p>直接终端输入 <code>nginx</code> 启动，可以使用  <code>ps -ef|grep nginx</code> 来查看是否启动成功<br><img src="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y37zurlj30kb047t9i.jpg" alt="image"><br>进程号为 3843<br>在终端输入 <code>kill -term  3843</code> 来停止进程</p>
 <h5 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br><span class="line">service nginx reload  <span class="comment">#不停服务重启</span></span><br></pre></td></tr></table></figure>
 <h5 id="查找配置文件路径"><a href="#查找配置文件路径" class="headerlink" title="查找配置文件路径"></a>查找配置文件路径</h5><p>mac下使用homebrew 安装 nginx 的路径：<br><code>/usr/local/etc/nginx/nginx.conf</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure></p>
 <h6 id="403-Forbidden权限问题解决"><a href="#403-Forbidden权限问题解决" class="headerlink" title="403 Forbidden权限问题解决"></a>403 Forbidden权限问题解决</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R <span class="variable">$USER</span>:<span class="variable">$USER</span> /root/www/blog</span><br><span class="line">sudo chmod -R 755 /root/www</span><br></pre></td></tr></table></figure>

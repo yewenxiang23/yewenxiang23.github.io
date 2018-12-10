@@ -90,21 +90,21 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="任何一个容器都可以指定 Flex 布局 123.box&amp;#123;  display: flex;&amp;#125; 行内元素也可以使用 Flex 布局 123.box&amp;#123;  display: inline-flex;&amp;#125; Webkit 内核的浏览器要加上 -webkit 前缀 1234.box&amp;#123;  display: -webkit-flex;  display: flex;&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.ywx.store/227d0e363818b90b277eea0d0a4fcbde.png">
-<meta property="og:image" content="http://img.ywx.store/83de1784810ba396faf7381a71a2ab8f.png">
-<meta property="og:image" content="http://img.ywx.store/0216702b72c969f7dd5a6e4348ccaf12.png">
-<meta property="og:image" content="http://img.ywx.store/247a073ce24096037a5fab6ba94905be.png">
-<meta property="og:image" content="http://img.ywx.store/b5248e00976add91fd5c2bc8b77f9009.png">
-<meta property="og:image" content="http://img.ywx.store/dad840506f92bd2161df5ff0fe51fcec.png">
-<meta property="og:image" content="http://img.ywx.store/5e4094fb3fbe8b39cd8c85c1ea5bc426.png">
-<meta property="og:image" content="http://img.ywx.store/85b62c5e695f1f823db2da9adc581e00.png">
-<meta property="og:image" content="http://img.ywx.store/8e4983c83c2c5a5a506f7f438f16621b.png">
-<meta property="og:image" content="http://img.ywx.store/bfe886b7a104af53978c12d24ff50765.png">
-<meta property="og:updated_time" content="2018-12-06T01:43:48.246Z">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1xxnssw4j30fe08zjs0.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xvdvtpnj30lk05d0so.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y1tskbdj30jh04xacg.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xy9nqanj30bs0dmq3e.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0073tXM5gy1fy1y44cx9nj30bg0e23z4.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/large/0073tXM5gy1fy1y7ioetpj30bh0e1t9g.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xrhj6haj30dn08pdfz.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xvx7prej30ej03l0so.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xt3a5uvj30d302o0tl.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y5cpedbj30d706nq35.jpg">
+<meta property="og:updated_time" content="2018-12-10T13:01:08.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flexbox弹性布局">
 <meta name="twitter:description" content="任何一个容器都可以指定 Flex 布局 123.box&amp;#123;  display: flex;&amp;#125; 行内元素也可以使用 Flex 布局 123.box&amp;#123;  display: inline-flex;&amp;#125; Webkit 内核的浏览器要加上 -webkit 前缀 1234.box&amp;#123;  display: -webkit-flex;  display: flex;&amp;">
-<meta name="twitter:image" content="http://img.ywx.store/227d0e363818b90b277eea0d0a4fcbde.png">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1xxnssw4j30fe08zjs0.jpg">
 
 
 
@@ -388,7 +388,7 @@
 <blockquote>
 <p>设为 Flex 布局后，子项目的 <code>float</code> , <code>clear</code> 和 <code>vertical-align</code> 属性都将失效。</p>
 </blockquote>
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>采用 Flex 布局的元素(display:flex)，称为 Flex 容器（flex container），它的所有子元素自动成为容器成员，称为子项目。<br><img src="http://img.ywx.store/227d0e363818b90b277eea0d0a4fcbde.png" alt=""></p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>采用 Flex 布局的元素(display:flex)，称为 Flex 容器（flex container），它的所有子元素自动成为容器成员，称为子项目。<br><img src="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1xxnssw4j30fe08zjs0.jpg" alt="image"></p>
 <p>容器默认存在两根主轴: <code>水平的主轴(main axis)</code> 和 <code>垂直的交叉轴(cross axis)</code>。</p>
 <p>主轴的开始位置(与边框的交叉点)叫做 <code>main start</code> , 结束位置叫做 <code>main end</code> ;交叉轴的开始位置叫做 <code>cross start</code> , 结束位置叫做 <code>cross end</code> 。</p>
 <p>项目默认沿着主轴排列,单个子项目占据的主轴空间叫做 <code>main size</code> ,占据的交叉轴空间叫做 <code>cross size</code> 。</p>
@@ -412,7 +412,7 @@
 <li>column-reverse : 主轴为垂直方向，起点在底部(bottom)。</li>
 </ul>
 </blockquote>
-<p><img src="http://img.ywx.store/83de1784810ba396faf7381a71a2ab8f.png" alt=""></p>
+<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xvdvtpnj30lk05d0so.jpg" alt="image"></p>
 <h4 id="flex-wrap-属性"><a href="#flex-wrap-属性" class="headerlink" title="flex-wrap 属性"></a>flex-wrap 属性</h4><p>默认情况下，子项目都排在一条轴线上。 <code>flex-wrap</code> 属性定义了如果一条轴线排不下如何换行。</p>
 <blockquote>
 <ul>
@@ -421,7 +421,7 @@
 <li>wrap-reverse : 换行，第一行在下方。如下图</li>
 </ul>
 </blockquote>
-<p><img src="http://img.ywx.store/0216702b72c969f7dd5a6e4348ccaf12.png" alt=""></p>
+<p><img src="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y1tskbdj30jh04xacg.jpg" alt="image"></p>
 <h4 id="flex-flow-属性"><a href="#flex-flow-属性" class="headerlink" title="flex-flow 属性"></a>flex-flow 属性</h4><p><code>flex-flow</code> 属性是 <code>flex-direction</code> 属性和 <code>flex-wrap</code> 属性的简写形式，默认值为 <code>row nowrap</code></p>
 <h4 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h4><p><code>justify-content</code> 属性定义了子项目在主轴上的对齐方式，他可能取五个值，具体对齐方式与轴的方向有关，下面假设主轴从左到右。</p>
 <blockquote>
@@ -433,7 +433,7 @@
 <li>space-around : 每个子项目两侧的间隔相等。所以，子项目之间的间隔比项目与容器边框的间隔大一倍</li>
 </ul>
 </blockquote>
-<p><img src="http://img.ywx.store/247a073ce24096037a5fab6ba94905be.png" alt=""></p>
+<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xy9nqanj30bs0dmq3e.jpg" alt="image"></p>
 <h4 id="align-items-属性"><a href="#align-items-属性" class="headerlink" title="align-items 属性"></a>align-items 属性</h4><p><code>align-items</code> 属性定义子项目在交叉轴上如何对齐,默认情况下是垂直方向,从上到下。</p>
 <blockquote>
 <ul>
@@ -444,7 +444,7 @@
 <li>stretch(默认值) : 如果子项目未设置高或者设置为auto,将占满整个容器的高度</li>
 </ul>
 </blockquote>
-<p><img src="http://img.ywx.store/b5248e00976add91fd5c2bc8b77f9009.png" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/0073tXM5gy1fy1y44cx9nj30bg0e23z4.jpg" alt="image"></p>
 <h4 id="align-content-属性"><a href="#align-content-属性" class="headerlink" title="align-content 属性"></a>align-content 属性</h4><p><code>align-content</code> 属性定义了多根轴线的对齐方式，如果项目只有一根轴线，该属性不起作用。</p>
 <blockquote>
 <ul>
@@ -455,7 +455,7 @@
 <li>space-around : 每根轴线两侧的间隔都相等，所以，轴线之间的间隔比轴线与容器边框的间隔大一倍</li>
 </ul>
 </blockquote>
-<p><img src="http://img.ywx.store/dad840506f92bd2161df5ff0fe51fcec.png" alt=""></p>
+<p><img src="https://wx4.sinaimg.cn/large/0073tXM5gy1fy1y7ioetpj30bh0e1t9g.jpg" alt="image"></p>
 <hr>
 <h3 id="Flex-子项目的6个属性"><a href="#Flex-子项目的6个属性" class="headerlink" title="Flex 子项目的6个属性"></a>Flex 子项目的6个属性</h3><blockquote>
 <ul>
@@ -468,13 +468,13 @@
 </ul>
 </blockquote>
 <h4 id="order-属性"><a href="#order-属性" class="headerlink" title="order 属性"></a>order 属性</h4><p><code>order</code> 属性定义子项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
-<p><img src="http://img.ywx.store/5e4094fb3fbe8b39cd8c85c1ea5bc426.png" alt=""></p>
+<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xrhj6haj30dn08pdfz.jpg" alt="image"></p>
 <h4 id="flex-grow-属性"><a href="#flex-grow-属性" class="headerlink" title="flex-grow 属性"></a>flex-grow 属性</h4><p><code>flex-grow</code> 属性定义项目的放大比例，默认值为0，即存在剩余空间也不放大。</p>
 <p>如果所有的子项目 <code>flex-grow</code> 属性都为1，存在剩余空间则它们将等分剩余空间，如果一个子项目的 <code>flex-grow</code> 属性为2，其他子项目都为1，则前者占据的剩余空间将比其他子项目多一倍，如下图。</p>
-<p><img src="http://img.ywx.store/85b62c5e695f1f823db2da9adc581e00.png" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xvx7prej30ej03l0so.jpg" alt="image"></p>
 <h4 id="flex-shrink-属性"><a href="#flex-shrink-属性" class="headerlink" title="flex-shrink 属性"></a>flex-shrink 属性</h4><p><code>flex-shrink</code> 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
 <p>如果所有子项目的  <code>flex-shrink</code> 属性都为1，当空间不足时，都将等比例缩小，如果一个子项目的 <code>flex-shrink</code> 属性为0，其他子项目都为1，则空间不足时，前者不缩小，如下图。</p>
-<p><img src="http://img.ywx.store/8e4983c83c2c5a5a506f7f438f16621b.png" alt=""></p>
+<p><img src="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xt3a5uvj30d302o0tl.jpg" alt="image"> </p>
 <h4 id="flex-basis-属性"><a href="#flex-basis-属性" class="headerlink" title="flex-basis 属性"></a>flex-basis 属性</h4><p><code>flex-basis</code> 属性定义了在分配多余空间之前，子项目占据的主轴空间，浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为 <code>auto</code> ，即子项目的本来大小。</p>
 <p>它可以设为跟 <code>width</code> 或 <code>height</code> 属性一样的值(比如100px)，则项目将占据固定空间。</p>
 <p><strong>flex-basis 取值情况:</strong></p>
@@ -521,7 +521,7 @@
 </ul>
 <p>建议优先使用这个属性，而不是单独写三个分离属性，因为浏览器会推算相关值。</p>
 <h4 id="align-self-属性"><a href="#align-self-属性" class="headerlink" title="align-self 属性"></a>align-self 属性</h4><p><code>align-self</code> 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 <code>align-items</code> 属性。默认值为 <code>auto</code> ，表示继承父元素的 <code>align-items</code> 属性，如果没有父元素，则等同于 <code>stretch</code> 。</p>
-<p><img src="http://img.ywx.store/bfe886b7a104af53978c12d24ff50765.png" alt=""></p>
+<p><img src="https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y5cpedbj30d706nq35.jpg" alt="image"></p>
 <hr>
 <p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="noopener">—摘自阮一峰的个人博客</a></p>
 

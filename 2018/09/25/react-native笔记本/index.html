@@ -90,14 +90,14 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="android App跳转到设置页面如何原生模块实现? Stack Overflow android 设置 常量列表  android App，设置禁止横屏。 AndroidManifest.xml 文件中的 &amp;lt;activity&amp;gt;  标签内添加 android:screenOrientation=&amp;quot;portrait&amp;quot;  ios android 设置App 名称 io">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.ywx.store/bfd7b629ad444a99cc1a63b05d973ec4.jpg">
-<meta property="og:image" content="http://img.ywx.store/9c2a5db771472405b3eab24d75cae03e.jpg">
-<meta property="og:image" content="http://img.ywx.store/c002c141de346bb163465506f0506134.jpg">
-<meta property="og:updated_time" content="2018-12-06T01:43:48.254Z">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y5022qmj30f502wgm2.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xtussjij30es03swes.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y5k91cdj30h305ht9m.jpg">
+<meta property="og:updated_time" content="2018-12-10T12:59:16.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native笔记本">
 <meta name="twitter:description" content="android App跳转到设置页面如何原生模块实现? Stack Overflow android 设置 常量列表  android App，设置禁止横屏。 AndroidManifest.xml 文件中的 &amp;lt;activity&amp;gt;  标签内添加 android:screenOrientation=&amp;quot;portrait&amp;quot;  ios android 设置App 名称 io">
-<meta name="twitter:image" content="http://img.ywx.store/bfd7b629ad444a99cc1a63b05d973ec4.jpg">
+<meta name="twitter:image" content="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y5022qmj30f502wgm2.jpg">
 
 
 
@@ -402,7 +402,7 @@
 </ul>
 <h5 id="ios-android-设置App-名称"><a href="#ios-android-设置App-名称" class="headerlink" title="ios android 设置App 名称"></a>ios android 设置App 名称</h5><ul>
 <li>ios : 在 <code>Info.plist</code>中修改</li>
-<li><img src="http://img.ywx.store/bfd7b629ad444a99cc1a63b05d973ec4.jpg" alt=""></li>
+<li><img src="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y5022qmj30f502wgm2.jpg" alt="image"></li>
 <li>Android : <code>android\app\src\main\res\values\strings.xml</code> 文件中修改 <code>&lt;string name=&quot;app_name&quot;&gt;MyProject&lt;/string&gt;</code></li>
 </ul>
 <h5 id="ios-android-设置icon图标"><a href="#ios-android-设置icon图标" class="headerlink" title="ios android 设置icon图标"></a>ios android 设置icon图标</h5><ul>
@@ -414,7 +414,7 @@
 <li>ios: 使用图片工具 <code>App Icon Gear</code> 来生成不同尺寸的图片</li>
 <li>之后 <a href="http://www.jianshu.com/p/735ba76594b5" target="_blank" rel="noopener">参考</a></li>
 </ul>
-<p>注意：<br><img src="http://img.ywx.store/9c2a5db771472405b3eab24d75cae03e.jpg" alt=""></p>
+<p>注意：<br><img src="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xtussjij30es03swes.jpg" alt="image"></p>
 <ul>
 <li>android: 使用 <code>react-native-splash-screen</code> 来实现。</li>
 <li>可以使用 <a href="http://ticons.fokkezb.nl/" target="_blank" rel="noopener">这里</a> 来生成android 的图片，注意生成后,每个文件夹里面的每张图名称需要更改为 <code>launch_screen</code> 然后配置 <code>react-native-splash-screen</code> ，就可以使用的了。</li>
@@ -429,7 +429,7 @@
 <li>ios : 直接 <code>source={require(&#39;../../assets/html/message.html&#39;)}</code></li>
 <li>android : Android 需要先把静态资源放到 <code>android/app/src/main/assets</code> 目录下面，然后把 <code>require(&#39;../../assets/html/message.html&#39;)</code> 换成 <code>{uri: &#39;file:///android_asset/html/message.html&#39;}</code>。</li>
 </ul>
-<h5 id="解决-android-绝对定位元素定位在底部被键盘顶起问题"><a href="#解决-android-绝对定位元素定位在底部被键盘顶起问题" class="headerlink" title="解决 android 绝对定位元素定位在底部被键盘顶起问题"></a>解决 android 绝对定位元素定位在底部被键盘顶起问题</h5><p><img src="http://img.ywx.store/c002c141de346bb163465506f0506134.jpg" alt=""></p>
+<h5 id="解决-android-绝对定位元素定位在底部被键盘顶起问题"><a href="#解决-android-绝对定位元素定位在底部被键盘顶起问题" class="headerlink" title="解决 android 绝对定位元素定位在底部被键盘顶起问题"></a>解决 android 绝对定位元素定位在底部被键盘顶起问题</h5><p><img src="https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y5k91cdj30h305ht9m.jpg" alt="image"></p>
 <p>如果希望被顶起：<code>android:windowSoftInputMode=&quot;adjustResize&quot;</code></p>
 <h5 id="TextInput-组件设置-value-值不显示的问题"><a href="#TextInput-组件设置-value-值不显示的问题" class="headerlink" title="TextInput 组件设置 value  值不显示的问题"></a>TextInput 组件设置 value  值不显示的问题</h5><p>value 值类型为字符串，设置成Number 类型不显示</p>
 

@@ -90,17 +90,17 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="为什么会发生AJAX跨域？浏览器限制当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。 跨域发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。 发送的是 XHR(XMLHttpRequest) 请求如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。 解决问题的思路1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动chrome。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.ywx.store/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg">
-<meta property="og:image" content="http://img.ywx.store/d6ab59d1f5d88bb1f8d72cba6adff180.jpg">
-<meta property="og:image" content="http://img.ywx.store/84cab8c7a9d4a6ddf11d91651dc8531f.jpg">
-<meta property="og:image" content="http://img.ywx.store/110b9eb47d145042bd41fe9cd5c0461c.jpg">
-<meta property="og:image" content="http://img.ywx.store/c5ff5786443e2cc9f4a032414eda975f.jpg">
-<meta property="og:image" content="http://img.ywx.store/1839df8c3a07b8c2dbae88d03e65484f.jpg">
-<meta property="og:updated_time" content="2018-12-06T01:43:48.249Z">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y79efxoj30of0533zd.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y72cqo9j30o605w75f.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xvns480j30jz08swfo.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xwidx7wj30dh083dgg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0073tXM5gy1fy1y5sjavrj30f805njs6.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y0hz45pj30od02974p.jpg">
+<meta property="og:updated_time" content="2018-12-10T13:00:55.867Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax跨域解决思路">
 <meta name="twitter:description" content="为什么会发生AJAX跨域？浏览器限制当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。 跨域发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。 发送的是 XHR(XMLHttpRequest) 请求如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。 解决问题的思路1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动chrome。">
-<meta name="twitter:image" content="http://img.ywx.store/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg">
+<meta name="twitter:image" content="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y79efxoj30of0533zd.jpg">
 
 
 
@@ -399,12 +399,12 @@
       
         <h3 id="为什么会发生AJAX跨域？"><a href="#为什么会发生AJAX跨域？" class="headerlink" title="为什么会发生AJAX跨域？"></a>为什么会发生AJAX跨域？</h3><h4 id="浏览器限制"><a href="#浏览器限制" class="headerlink" title="浏览器限制"></a>浏览器限制</h4><p>当浏览器发现请求是跨域的时候，它会做一些校验，如果校验不通过它就会报跨域安全错误。</p>
 <h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p>发出去的请求，协议、端口、请求地址，任何一个不一样，浏览器就会认为是跨域。</p>
-<h4 id="发送的是-XHR-XMLHttpRequest-请求"><a href="#发送的是-XHR-XMLHttpRequest-请求" class="headerlink" title="发送的是 XHR(XMLHttpRequest) 请求"></a>发送的是 XHR(XMLHttpRequest) 请求</h4><p>如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。<br><img src="http://img.ywx.store/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg" alt=""></p>
+<h4 id="发送的是-XHR-XMLHttpRequest-请求"><a href="#发送的是-XHR-XMLHttpRequest-请求" class="headerlink" title="发送的是 XHR(XMLHttpRequest) 请求"></a>发送的是 XHR(XMLHttpRequest) 请求</h4><p>如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。<br><img src="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y79efxoj30of0533zd.jpg" alt="image"></p>
 <h3 id="解决问题的思路"><a href="#解决问题的思路" class="headerlink" title="解决问题的思路"></a>解决问题的思路</h3><p>1.浏览器限制，我们就解除浏览器的跨域限制，从命令行中启动chrome。</p>
 <p><code>open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/wenxiangye/MyChromeDevUserData/</code></p>
 <p>2.JSONP如何解决跨域问题？<br>利用JQ实现JSONP请求</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	url: base+<span class="string">"/get1"</span>,</span><br><span class="line">	dataType: <span class="string">"jsonp"</span>,</span><br><span class="line">	jsonp: <span class="string">"callback2"</span>,   <span class="comment">//默认不写前后端约定的名称是 callback</span></span><br><span class="line">	cache: <span class="literal">true</span>,  <span class="comment">//表示结果可以被缓存，jsonp请求url中不会带 `_`字段</span></span><br><span class="line">	success: <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">		result = json;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><img src="http://img.ywx.store/d6ab59d1f5d88bb1f8d72cba6adff180.jpg" alt=""></p>
+<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y72cqo9j30o605w75f.jpg" alt="image"></p>
 <blockquote>
 <p>有三个不同点:</p>
 <ol>
@@ -414,7 +414,7 @@
 </ol>
 </blockquote>
 <p>动态创建<code>&lt;script&gt;</code>标签，请求的资源可以跨域，来解决跨域问题的（eg：<code>&lt;img&gt;</code>标签中请求图片的地址可以跨域）<br>后台代码也需要做处理，因为后台代码返回的是JSON，而通过JSONP请求的是JS文件，浏览器会把后台返回的JSON字符串当成是JS来解析，所以报错了。<br>后台代码需要做的调整就是：请求参数中发现callback 这个字段，需要返回JS代码，callback 后面的值作为函数名，而请求需要返回的参数，作为函数的参数。</p>
-<p>动态创建的script请求完毕后会被销毁，所以dom结构中无法查看，需要再JQ源码中9816行出打断点查看。<br><img src="http://img.ywx.store/84cab8c7a9d4a6ddf11d91651dc8531f.jpg" alt=""></p>
+<p>动态创建的script请求完毕后会被销毁，所以dom结构中无法查看，需要再JQ源码中9816行出打断点查看。<br><img src="https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xvns480j30jz08swfo.jpg" alt="image"></p>
 <blockquote>
 <p>jsonp请求里面除了callback参数之外还多了一个<code>_</code>参数，参数值是一个随机的数字，防止请求被缓存。</p>
 </blockquote>
@@ -440,9 +440,9 @@
 <p>后端设置头信息 <code>Axxess-Control-Allow-Origin: http://localhost:8081</code>和<code>Access-Control-Allow-Credentials: true</code></p>
 <p>但是这样做之后，浏览器只会允许 <code>http://localhost:8081</code> 这个地址来跨域，如果需要多个地址请求实现跨域如何实现呢？<br>之前知识点： <strong>浏览器发现请求是跨域的时候，他会在请求头增加当前域的字段Origin: <a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a> 等请求返回来，他会检查响应头里面的字段信息，是否允许跨域。</strong><br>后端可以动态的去取 <code>Origin</code>这个字段的值，如果不为空，则 <code>Axxess-Control-Allow-Origin: Origin</code>,现在就可以支持任何的跨域调用了。</p>
 <h3 id="带自定头的跨域"><a href="#带自定头的跨域" class="headerlink" title="带自定头的跨域"></a>带自定头的跨域</h3><p>首先前端定义：</p>
-<p><img src="http://img.ywx.store/110b9eb47d145042bd41fe9cd5c0461c.jpg" alt=""></p>
-<p>可以发现请求头部增加了如下内容：<br><img src="http://img.ywx.store/c5ff5786443e2cc9f4a032414eda975f.jpg" alt=""></p>
-<p>此时去请求发现报错<br><img src="http://img.ywx.store/1839df8c3a07b8c2dbae88d03e65484f.jpg" alt=""><br>报错信息的意思是：在返回头<code>Access-Control-Allow-Headers</code> 字段中没有 <code>x-header2</code> 的信息，把 <code>x-header1 x-header2</code> 加进去就行了，最好是动态的获取请求头<code>Origin</code>里面的值去添加，这样就支持所有的自定义头部了。</p>
+<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xwidx7wj30dh083dgg.jpg" alt="image"></p>
+<p>可以发现请求头部增加了如下内容：<br><img src="https://ws1.sinaimg.cn/large/0073tXM5gy1fy1y5sjavrj30f805njs6.jpg" alt="image"></p>
+<p>此时去请求发现报错<br><img src="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y0hz45pj30od02974p.jpg" alt="image"><br>报错信息的意思是：在返回头<code>Access-Control-Allow-Headers</code> 字段中没有 <code>x-header2</code> 的信息，把 <code>x-header1 x-header2</code> 加进去就行了，最好是动态的获取请求头<code>Origin</code>里面的值去添加，这样就支持所有的自定义头部了。</p>
 <h3 id="虚拟主机上设置响应头信息"><a href="#虚拟主机上设置响应头信息" class="headerlink" title="虚拟主机上设置响应头信息"></a>虚拟主机上设置响应头信息</h3><p>之前我们是直接在应用服务器上面修改响应头信息，现在我们建立一个虚拟主机，在虚拟主机上面修改响应头信息<br>被调用方的虚拟主机的配置。</p>
 <p>第一步首先配置HOST文件eg:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> b.com</span><br></pre></td></tr></table></figure>
