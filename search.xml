@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[uni-app笔记]]></title>
+    <url>%2F2019%2F03%2F26%2Funi-app%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[渐进式效果1234567891011&#123; "path": "pages/team/trackRecord", "style": &#123; "titleNView": &#123; "type": "transparent", "titleText": "业绩记录", "backgroundColor": "#4b74f2", "titleColor": "#fff" &#125; &#125; &#125;,]]></content>
+      <tags>
+        <tag>uni-app</tag>
+        <tag>app</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[谷歌vpn]]></title>
     <url>%2F2019%2F02%2F23%2F%E8%B0%B7%E6%AD%8Cvpn%2F</url>
     <content type="text"><![CDATA[安装shadowsocks使用的是ubuntu16.4系统,使用root用户登录后输入一下命令 123wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.shchmod +x shadowsocks.sh./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log 安装完成后，脚本提示如下 12345678Congratulations, Shadowsocks-python server install completed!Your Server IP :your_server_ipYour Server Port :your_server_portYour Password :your_passwordYour Encryption Method:your_encryption_methodWelcome to visit:https://teddysun.com/342.htmlEnjoy it! 卸载shadowsocks1./shadowsocks.sh uninstall 单用户配置配置文件路径：/etc/shadowsocks.json1234567891011&#123; "server":"0.0.0.0", "server_port":"your_server_port", "local_address":"127.0.0.1", "local_port":1080, "password":"your_password", "timeout":300, "method":"your_encryption_method", "fast_open": false&#125; 多用户配置配置文件路径：/etc/shadowsocks.json 123456789101112131415&#123; "server":"0.0.0.0", "local_address":"127.0.0.1", "local_port":1080, "port_password":&#123; "8989":"password0", "9001":"password1", "9002":"password2", "9003":"password3", "9004":"password4" &#125;, "timeout":300, "method":"your_encryption_method", "fast_open": false&#125; 使用指令启动：/etc/init.d/shadowsocks start停止：/etc/init.d/shadowsocks stop重启：/etc/init.d/shadowsocks restart状态：/etc/init.d/shadowsocks status 客户端下载地址shadowsocks windowshadowsocks androidshadowsocks mac]]></content>
