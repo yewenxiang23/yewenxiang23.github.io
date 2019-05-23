@@ -90,12 +90,12 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="全局CSS 默认情况下 Nuxt 使用 vue-loader、file-loader 以及 url-loader 这几个 Webpack 加载器来处理文件的加载和引用。对于不需要通过 Webpack 处理的静态资源文件，可以放置在 static 目录中。  12//nuxt.config.jscss:[&apos;~assets/css/main.css&apos;] 路由传参路由和vue中类似，不过Nuxt是根据p">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wx4.sinaimg.cn/large/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg">
-<meta property="og:updated_time" content="2018-12-10T13:03:48.000Z">
+<meta property="og:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg">
+<meta property="og:updated_time" content="2019-05-23T02:49:40.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nuxt入门">
 <meta name="twitter:description" content="全局CSS 默认情况下 Nuxt 使用 vue-loader、file-loader 以及 url-loader 这几个 Webpack 加载器来处理文件的加载和引用。对于不需要通过 Webpack 处理的静态资源文件，可以放置在 static 目录中。  12//nuxt.config.jscss:[&apos;~assets/css/main.css&apos;] 路由传参路由和vue中类似，不过Nuxt是根据p">
-<meta name="twitter:image" content="https://wx4.sinaimg.cn/large/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg">
+<meta name="twitter:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg">
 
 
 
@@ -397,7 +397,7 @@
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//nuxt.config.js</span></span><br><span class="line">css:[<span class="string">'~assets/css/main.css'</span>]</span><br></pre></td></tr></table></figure>
 <h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3><p>路由和vue中类似，不过Nuxt是根据page目录来动态生成路由表的，不需要我们配置。</p>
-<p><img src="https://wx4.sinaimg.cn/large/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg" alt="image"></p>
+<p><img src="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg" alt="image"></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">nuxt-link</span> <span class="attr">to</span>=<span class="string">"/"</span>&gt;</span>home<span class="tag">&lt;/<span class="name">nuxt-link</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">nuxt-link</span> <span class="attr">:to</span>=<span class="string">"&#123;name: 'about', params:&#123;id: 1&#125;&#125;"</span>&gt;</span>about<span class="tag">&lt;/<span class="name">nuxt-link</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">nuxt-link</span> <span class="attr">to</span>=<span class="string">"views"</span>&gt;</span>views<span class="tag">&lt;/<span class="name">nuxt-link</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><p>在路由里面定义带参数的动态路由。需要创建<em>以下划线为前缀</em>的Vue文件或目录</p>
 <p>写法一：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nuxt-link</span> <span class="attr">:to</span>=<span class="string">"'/community/member/'+ user.id"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>

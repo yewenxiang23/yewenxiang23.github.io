@@ -90,16 +90,16 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="数据流数据流是什么？为什么要用数据流？  数据流是我们的行为与响应的抽象 使用数据流可以帮助我们明确行为对应的响应  React与数据流的关系  React 是纯V层的框架，不涉及任何的数据和控制，需要数据流进行支撑  主流数据流框架  Flux  facebook 官方出的一个配合React来实现数据流的框架，属于单向数据流绑定，非常的大和重，实用性不强。   reFlux  属于 Flux 的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xuzt7gmj30t20jw49j.jpg">
-<meta property="og:image" content="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1xnw7yczj30v00mqwjd.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y0vh8xej30qm0p6al6.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/0073tXM5gy1fy1xm14jlqj31760lagsc.jpg">
-<meta property="og:updated_time" content="2018-12-10T12:57:28.000Z">
+<meta property="og:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg">
+<meta property="og:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xuzt7gmj30t20jw49j.jpg">
+<meta property="og:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xnw7yczj30v00mqwjd.jpg">
+<meta property="og:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y0vh8xej30qm0p6al6.jpg">
+<meta property="og:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xm14jlqj31760lagsc.jpg">
+<meta property="og:updated_time" content="2019-05-23T02:51:46.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redux">
 <meta name="twitter:description" content="数据流数据流是什么？为什么要用数据流？  数据流是我们的行为与响应的抽象 使用数据流可以帮助我们明确行为对应的响应  React与数据流的关系  React 是纯V层的框架，不涉及任何的数据和控制，需要数据流进行支撑  主流数据流框架  Flux  facebook 官方出的一个配合React来实现数据流的框架，属于单向数据流绑定，非常的大和重，实用性不强。   reFlux  属于 Flux 的">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg">
+<meta name="twitter:image" content="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg">
 
 
 
@@ -424,12 +424,12 @@
 </li>
 </ul>
 <h1 id="单向数据流"><a href="#单向数据流" class="headerlink" title="单向数据流"></a>单向数据流</h1><p>不只是前端，很多系统开发的时候遵从的都是MVC分离，也就是数据放在Model里面，View来控制显示，Controler做整体的管理。但是随着系统的庞大，它会产生一系列问题。比如举个例子，我们上网shopping，提交订单，那么用户的账号，优惠信息，物流信息，库存等等的Model都会发生更新变化，然后View上的显示也会随之变化，反过来，View的有些变化也会对Model产生影响，这样就使用户下了一个订单以后界面会变得什么样变得不可预测。</p>
-<p><img src="https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg" alt="image"></p>
+<p><img src="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg" alt="image"></p>
 <p>所以在React出现的同时Facebook也搞出了一个Flux <code>单向数据流</code> (React是纯V层框架，需要数据流进行支撑)，它的思想如下:它认为用户有各种各样的Action,然后所有的Action由一个统一的Dispacher分发到若干个Store里去，这个Store保存着数据也保存着页面的状态，根据数据和页面的状态，一个store只能向视图层传递信息，而不允许视图层再返回来作用到Store上，然后视图就发生更新，然后再由用户传入新的操作。这样子我们就能预测到Action作用到Store上时，View发生什么变化。</p>
-<p><img src="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xuzt7gmj30t20jw49j.jpg" alt="image"></p>
+<p><img src="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xuzt7gmj30t20jw49j.jpg" alt="image"></p>
 <p>Redux是Flux的一种实现方法，但是也有些许不一样，它的思想如下</p>
-<p><img src="https://wx1.sinaimg.cn/large/0073tXM5gy1fy1xnw7yczj30v00mqwjd.jpg" alt="image"></p>
-<p><img src="https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y0vh8xej30qm0p6al6.jpg" alt="image"></p>
+<p><img src="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xnw7yczj30v00mqwjd.jpg" alt="image"></p>
+<p><img src="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y0vh8xej30qm0p6al6.jpg" alt="image"></p>
 <p>当页面渲染完，UI就出现了，然后用户触发UI上的Action，然后Action被送到Reducer这个方法里去，然后Reducer更新了Store，Store里包含react开发的State，最后State决定UI层的展现。这就是Redux的一个完整过程。</p>
 <h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><p>四个重要的文件夹</p>
 <ul>
@@ -441,7 +441,7 @@
 <li>server.js</li>
 <li>webpack</li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/0073tXM5gy1fy1xm14jlqj31760lagsc.jpg" alt="image"></p>
+<p><img src="http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xm14jlqj31760lagsc.jpg" alt="image"></p>
 <p>安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn add --save redux react-redux</span><br></pre></td></tr></table></figure>
 <p>redux本身就是一个工具流，而react-redux则是对redux的绑定。类似的还有ng2-redux、backbone-redux等</p>
