@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node-事件驱动]]></title>
+    <url>%2F2019%2F05%2F29%2Fnode-%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%2F</url>
+    <content type="text"><![CDATA[核心要点 node 是单进程单线程应用程序，但是通过事件和回调支持并发。 node 每一个API都是异步的，并作为一个独立线程运行。 node 基本上所有的事件机制都是用观察者模式实现。 内置事件处理 events模块1234const events = require('events');const eventEmitter = new events.EventEmitter();eventEmitter.on('eventName', eventHandler); //绑定事件处理程序eventEmitter.emit('eventName'); //触发事件处理程序 接收参数1234eventHandler(parms1, parms2)&#123; ...&#125;eventEmitter.emit('eventName', parms1, parms2); 其他方法123eventEmitter.addListener(eventName, eventHandler) //监听事件eventEmitter.on(eventName, eventHandler) //监听事件//两者无区别 1eventEmitter.once(eventName, eventHandler) //只会触发一次，自动解除监听 1eventEmitter.removeListener(eventName, eventHandler)//移除监听 error 事件EventEmitter 定义了一个特殊的事件 error, 当 error 被触发时，EventEmitter 规定如果没有响 应的监听器，Node.js 会把它当作异常，退出程序并输出错误信息。 1eventEmitter.emit('error'); //如果没有监听 'error' 则报错]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[uni-app笔记]]></title>
     <url>%2F2019%2F03%2F26%2Funi-app%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[渐进式效果1234567891011&#123; "path": "pages/team/trackRecord", "style": &#123; "titleNView": &#123; "type": "transparent", "titleText": "业绩记录", "backgroundColor": "#4b74f2", "titleColor": "#fff" &#125; &#125; &#125;,]]></content>
@@ -351,7 +359,7 @@
   <entry>
     <title><![CDATA[Linux基本命令]]></title>
     <url>%2F2018%2F09%2F26%2FLinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[cd跳转命令 Change Directory翻译过来就是改变文件夹 ,cd后面要跟一个文件夹的名字1cd dir 输入文件夹名字时支持tab补齐 两个点表示跳到上一级文件夹中 eg: cd .. cd跳转又分为相对路径和绝对路径 相对路径 打开当前文件夹里面的文件夹,或者 cd .. 跳到上一个文件夹 绝对路径 使用绝对路径最大的好处是跟当前位置无关 以老祖宗文件夹 / 打头,例如：不管我们在哪 cd / 都可以跳到根目录中, cd /Users/wenxiangye 可以直接跳到用户主目录 等价于 cd ~. 打印出的当前位置1pwd 列出当前文件夹中的所有文件和文件夹12ls需要列出隐藏的文件夹时用 `ls -a` 创建一个文件12touch fileatom file 通常使用atom编辑器创建一个文件 创建一个文件夹1mkdir dir 删除文件夹 remove12rm file删除file文件 12rm -r dir删除文件夹 注意 .git 文件夹有写保护 需要使用 rm -rf dir 来强制删除 12rm -r *可以删除当前位置的所有文件个文件夹 拷贝操作 copy12cp file1 file2拷贝文件file1 变成 file2, file1和file2就文件名字不同 12cp -r dir1 dir2拷贝文件夹dir1 变成 dir2, dir1和dir2文件夹中的内容是相同的 12mv aaa/* bbb把文件夹aaa中的所有文件全部拷贝到bbb文件夹中 重命名和移动操作 move123mv file dirmv dir1 dir2移动file文件到dir文件夹中 可以通过file dir1来查看文件的类型 12mv file1 file2mv dir dir1 这里是把文件file1改名成了file2,当前目录不能存在 file2和dir1文件，如果存在则是移动和替换操作 12mv file ..移动文件到上一级目录 查看文件12cat file会列出文件里面的内容 普通用户和超级用户我们平时在用户主目录文件夹里面，用普通用户的身份就能去增删改的操作了，但是在其他目录下面需要超级用户的身份才能去执行操作，实现的方式:12sudo rm file上面的命令可以用超级用户权限执行一个命令 1sudo su 可以直接化身超级用户,可以输入 whoami 打印出当前用户的身份，退出超级用户成普通用户，敲 Ctrl-D]]></content>
+    <content type="text"><![CDATA[MAC查看外网IP1curl ipinfo.io/json cd跳转命令 Change Directory翻译过来就是改变文件夹 ,cd后面要跟一个文件夹的名字1cd dir 输入文件夹名字时支持tab补齐 两个点表示跳到上一级文件夹中 eg: cd .. cd跳转又分为相对路径和绝对路径 相对路径 打开当前文件夹里面的文件夹,或者 cd .. 跳到上一个文件夹 绝对路径 使用绝对路径最大的好处是跟当前位置无关 以老祖宗文件夹 / 打头,例如：不管我们在哪 cd / 都可以跳到根目录中, cd /Users/wenxiangye 可以直接跳到用户主目录 等价于 cd ~. 打印出的当前位置1pwd 列出当前文件夹中的所有文件和文件夹12ls需要列出隐藏的文件夹时用 `ls -a` 创建一个文件12touch fileatom file 通常使用atom编辑器创建一个文件 创建一个文件夹1mkdir dir 删除文件夹 remove12rm file删除file文件 12rm -r dir删除文件夹 注意 .git 文件夹有写保护 需要使用 rm -rf dir 来强制删除 12rm -r *可以删除当前位置的所有文件个文件夹 拷贝操作 copy12cp file1 file2拷贝文件file1 变成 file2, file1和file2就文件名字不同 12cp -r dir1 dir2拷贝文件夹dir1 变成 dir2, dir1和dir2文件夹中的内容是相同的 12mv aaa/* bbb把文件夹aaa中的所有文件全部拷贝到bbb文件夹中 重命名和移动操作 move123mv file dirmv dir1 dir2移动file文件到dir文件夹中 可以通过file dir1来查看文件的类型 12mv file1 file2mv dir dir1 这里是把文件file1改名成了file2,当前目录不能存在 file2和dir1文件，如果存在则是移动和替换操作 12mv file ..移动文件到上一级目录 查看文件12cat file会列出文件里面的内容 普通用户和超级用户我们平时在用户主目录文件夹里面，用普通用户的身份就能去增删改的操作了，但是在其他目录下面需要超级用户的身份才能去执行操作，实现的方式:12sudo rm file上面的命令可以用超级用户权限执行一个命令 1sudo su 可以直接化身超级用户,可以输入 whoami 打印出当前用户的身份，退出超级用户成普通用户，敲 Ctrl-D]]></content>
       <tags>
         <tag>bash</tag>
       </tags>
