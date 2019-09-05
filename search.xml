@@ -554,7 +554,7 @@
   <entry>
     <title><![CDATA[hexo相关]]></title>
     <url>%2F2018%2F09%2F24%2Fhexo%2F</url>
-    <content type="text"><![CDATA[1hexo clean &amp;&amp; hexo generate --deploy #自动部署]]></content>
+    <content type="text"><![CDATA[12hexo clean &amp;&amp; hexo generate --deploy #自动部署hexo g &amp;&amp; hexo d #部署到github]]></content>
       <categories>
         <category>博客</category>
       </categories>
