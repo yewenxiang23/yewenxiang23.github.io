@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ywx.store/2020/05/29/react-navigation-5-X/</loc>
+    
+    <lastmod>2020-06-01T07:36:08.915Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.ywx.store/2018/09/25/react-native%E7%AC%94%E8%AE%B0%E6%9C%AC/</loc>
+    
+    <lastmod>2020-06-01T07:35:00.848Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.ywx.store/2018/09/24/koa%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2019-12-31T01:18:19.762Z</lastmod>
@@ -44,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/24/nginx%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://www.ywx.store/2018/09/29/react-native%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87/</loc>
     
     <lastmod>2019-09-05T14:19:22.756Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/29/react-native%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87/</loc>
+    <loc>https://www.ywx.store/2018/09/24/nginx%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2019-09-05T14:19:22.756Z</lastmod>
     
@@ -61,13 +75,6 @@
     <loc>https://www.ywx.store/2018/09/29/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</loc>
     
     <lastmod>2019-09-05T14:19:22.756Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.ywx.store/2018/09/25/react-native%E7%AC%94%E8%AE%B0%E6%9C%AC/</loc>
-    
-    <lastmod>2019-09-05T14:19:22.755Z</lastmod>
     
   </url>
   
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/27/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
+    <loc>https://www.ywx.store/2018/09/24/react-redux-%E4%BD%BF%E7%94%A8%E8%A3%85%E9%A5%B0%E5%99%A8%E4%BC%98%E5%8C%96connect%E4%BB%A3%E7%A0%81/</loc>
     
     <lastmod>2019-09-05T14:19:22.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/24/react-redux-%E4%BD%BF%E7%94%A8%E8%A3%85%E9%A5%B0%E5%99%A8%E4%BC%98%E5%8C%96connect%E4%BB%A3%E7%A0%81/</loc>
+    <loc>https://www.ywx.store/2018/09/27/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
     
     <lastmod>2019-09-05T14:19:22.754Z</lastmod>
     
@@ -114,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/27/mongoDB%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://www.ywx.store/2018/09/24/mongoDB%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2019-09-05T14:19:22.750Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/24/mongoDB%E6%93%8D%E4%BD%9C/</loc>
+    <loc>https://www.ywx.store/2018/09/27/mongoDB%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     
     <lastmod>2019-09-05T14:19:22.750Z</lastmod>
     
