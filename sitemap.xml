@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.ywx.store/2020/05/29/react-navigation-5-X/</loc>
+    <loc>https://www.ywx.store/2018/09/25/react-native%E7%AC%94%E8%AE%B0%E6%9C%AC/</loc>
     
-    <lastmod>2020-06-01T07:36:08.915Z</lastmod>
+    <lastmod>2020-06-28T10:09:08.788Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/25/react-native%E7%AC%94%E8%AE%B0%E6%9C%AC/</loc>
+    <loc>https://www.ywx.store/2018/09/29/react-native-vector-icons%E7%94%A8%E6%B3%95/</loc>
     
-    <lastmod>2020-06-01T07:35:00.848Z</lastmod>
+    <lastmod>2020-06-03T03:31:26.488Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.ywx.store/2020/05/29/react-navigation-5-X/</loc>
+    
+    <lastmod>2020-06-01T07:36:08.915Z</lastmod>
     
   </url>
   
@@ -58,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/29/react-native%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87/</loc>
+    <loc>https://www.ywx.store/2018/09/24/nginx%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2019-09-05T14:19:22.756Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/24/nginx%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://www.ywx.store/2018/09/29/react-native%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87/</loc>
     
     <lastmod>2019-09-05T14:19:22.756Z</lastmod>
     
@@ -121,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/24/mongoDB%E6%93%8D%E4%BD%9C/</loc>
+    <loc>https://www.ywx.store/2018/09/27/mongoDB%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     
     <lastmod>2019-09-05T14:19:22.750Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.ywx.store/2018/09/27/mongoDB%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://www.ywx.store/2018/09/24/mongoDB%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2019-09-05T14:19:22.750Z</lastmod>
     
@@ -285,13 +292,6 @@
     <loc>https://www.ywx.store/2018/09/29/js%E7%BB%A7%E6%89%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</loc>
     
     <lastmod>2018-09-29T03:59:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.ywx.store/2018/09/29/react-native-vector-icons%E7%94%A8%E6%B3%95/</loc>
-    
-    <lastmod>2018-09-29T03:56:48.000Z</lastmod>
     
   </url>
   
